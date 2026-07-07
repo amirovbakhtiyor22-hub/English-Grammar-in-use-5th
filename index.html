@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English Grammar in Use — To'liq Test</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #EAF1EF;
+    --bg-deep: #DCE8E5;
+    --surface: #FFFFFF;
+    --surface-soft: #F4F8F7;
+    --ink: #16292A;
+    --ink-soft: #4C6668;
+    --ink-faint: #7C9294;
+    --teal: #0F4C4F;
+    --teal-deep: #093435;
+    --teal-tint: #DDEBEA;
+    --coral: #D2483A;
+    --coral-deep: #AC3629;
+    --coral-tint: #FBE3DF;
+    --green: #2C7A54;
+    --green-deep: #1F5D40;
+    --green-tint: #DCEFE3;
+    --gold: #B9822E;
+    --gold-tint: #F5E9D3;
+    --border: #C9D9D6;
+    --shadow: 0 1px 2px rgba(15,76,79,0.06), 0 8px 24px -12px rgba(15,76,79,0.22);
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 22px;
+    --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
+    --font-body: 'Source Sans 3', 'Source Sans Pro', 'Segoe UI', sans-serif;
+  }
+
+  *{ box-sizing: border-box; }
+
+  html,body{
+    margin:0;
+    padding:0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  #app{
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 28px 20px 80px;
+    min-height: 100vh;
+  }
+
+  @media (min-width: 640px){
+    #app{ padding: 44px 32px 100px; }
+  }
+
+  ::selection{ background: var(--coral-tint); color: var(--coral-deep); }
+
+  button{ font-family: inherit; cursor: pointer; }
+  a{ color: inherit; }
+
+  .sr-only{
+    position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+    overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+  }
+
+  /* ---------- Masthead ---------- */
+  .masthead{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+  .masthead-brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-family: var(--font-display);
+    font-weight:600;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--teal);
+  }
+  .masthead-brand .mark{
+    width: 28px; height:28px;
+    border-radius: 7px;
+    background: var(--teal);
+    color: #fff;
+    display:flex; align-items:center; justify-content:center;
+    font-size: 15px;
+    font-weight:700;
+    flex-shrink:0;
+  }
+  .masthead-score{
+    font-family: var(--font-display);
+    font-size: 13px;
+    color: var(--ink-soft);
+    text-align:right;
+    line-height:1.4;
+  }
+  .masthead-score b{ color: var(--teal); font-size:16px; }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background: var(--teal);
+    color: #EFF6F5;
+    border-radius: var(--radius-lg);
+    padding: 34px 28px;
+    margin-bottom: 22px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;
+    right:-60px; top:-60px;
+    width:220px; height:220px;
+    border-radius:50%;
+    background: radial-gradient(circle, rgba(210,72,58,0.35), transparent 70%);
+  }
+  .hero-eyebrow{
+    font-family: var(--font-display);
+    font-size: 12.5px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--coral-tint);
+    opacity:0.85;
+    margin-bottom: 10px;
+    position:relative;
+  }
+  .hero h1{
+    font-family: var(--font-display);
+    font-size: clamp(26px, 5vw, 38px);
+    line-height: 1.12;
+    margin: 0 0 12px;
+    letter-spacing: -0.01em;
+    position:relative;
+  }
+  .hero p{
+    font-size: 15.5px;
+    line-height:1.55;
+    color: #D3E6E3;
+    max-width: 52ch;
+    margin: 0 0 22px;
+    position:relative;
+  }
+  .hero-stats{
+    display:flex;
+    gap: 22px;
+    flex-wrap:wrap;
+    margin-bottom: 24px;
+    position:relative;
+  }
+  .hero-stat b{
+    display:block;
+    font-family:var(--font-display);
+    font-size: 22px;
+    color:#fff;
+  }
+  .hero-stat span{
+    font-size: 12px;
+    color: #AFC9C5;
+    text-transform: uppercase;
+    letter-spacing:0.05em;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    border:none;
+    border-radius: 999px;
+    padding: 14px 26px;
+    font-size: 15.5px;
+    font-weight:600;
+    font-family: var(--font-display);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  }
+  .btn:active{ transform: scale(0.97); }
+  .btn-primary{
+    background: var(--coral);
+    color: #fff;
+    box-shadow: 0 10px 24px -10px rgba(210,72,58,0.7);
+    position:relative;
+  }
+  .btn-primary:hover{ background: var(--coral-deep); }
+  .btn-ghost{
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    border:1px solid rgba(255,255,255,0.35);
+  }
+  .btn-ghost:hover{ background: rgba(255,255,255,0.2); }
+  .btn-secondary{
+    background: var(--surface);
+    color: var(--teal);
+    border:1.5px solid var(--border);
+  }
+  .btn-secondary:hover{ border-color: var(--teal); }
+  .btn-block{ width:100%; justify-content:center; }
+  .btn-row{ display:flex; gap:12px; flex-wrap:wrap; }
+
+  /* ---------- Section list on home ---------- */
+  .section-list-label{
+    font-family: var(--font-display);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-soft);
+    margin: 30px 0 12px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .card-grid{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  @media (min-width:560px){
+    .card-grid{ grid-template-columns: 1fr 1fr; }
+  }
+  .section-card{
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 16px 16px;
+    text-align:left;
+    display:flex;
+    gap:12px;
+    align-items:flex-start;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .section-card:hover{
+    border-color: var(--teal);
+    transform: translateY(-1px);
+  }
+  .section-tag{
+    font-family: var(--font-display);
+    font-weight:700;
+    font-size: 12.5px;
+    color: var(--teal);
+    background: var(--teal-tint);
+    border-radius: 7px;
+    padding: 6px 8px;
+    white-space:nowrap;
+    flex-shrink:0;
+    min-width: 54px;
+    text-align:center;
+  }
+  .section-card.is-vocab .section-tag{
+    color: var(--coral-deep);
+    background: var(--coral-tint);
+  }
+  .section-card-body{ flex:1; min-width:0; }
+  .section-card-title{
+    font-weight:600;
+    font-size: 15px;
+    margin: 0 0 2px;
+    color: var(--ink);
+  }
+  .section-card-sub{
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    margin: 0 0 8px;
+  }
+  .section-card-meta{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size: 12px;
+    color: var(--ink-faint);
+  }
+  .score-pill{
+    font-family: var(--font-display);
+    font-weight:700;
+    font-size: 11.5px;
+    padding: 3px 8px;
+    border-radius: 999px;
+  }
+  .score-pill.great{ background: var(--green-tint); color: var(--green-deep); }
+  .score-pill.ok{ background: var(--gold-tint); color: var(--gold); }
+  .score-pill.low{ background: var(--coral-tint); color: var(--coral-deep); }
+
+  /* ---------- Quiz screen ---------- */
+  .quiz-topbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+  .back-btn{
+    background:none; border:none;
+    color: var(--ink-soft);
+    font-size: 14px;
+    display:flex; align-items:center; gap:6px;
+    padding: 6px 4px;
+  }
+  .back-btn:hover{ color: var(--teal); }
+  .progress-track{
+    flex:1;
+    height: 6px;
+    background: var(--bg-deep);
+    border-radius: 999px;
+    margin: 0 14px;
+    overflow:hidden;
+  }
+  .progress-fill{
+    height:100%;
+    background: var(--coral);
+    border-radius:999px;
+    transition: width 0.25s ease;
+  }
+  .progress-count{
+    font-family: var(--font-display);
+    font-size: 13px;
+    color: var(--ink-soft);
+    white-space:nowrap;
+  }
+
+  .q-card{
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    padding: 26px 22px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+  }
+  .q-unit-row{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom: 16px;
+  }
+  .q-unit-badge{
+    font-family: var(--font-display);
+    font-weight:700;
+    font-size: 13px;
+    background: var(--teal);
+    color:#fff;
+    padding: 5px 10px;
+    border-radius: 7px;
+    letter-spacing:0.02em;
+  }
+  .q-unit-title{
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    line-height:1.3;
+  }
+  .q-prompt{
+    font-size: clamp(18px, 3.6vw, 21px);
+    line-height:1.5;
+    font-weight:500;
+    color: var(--ink);
+    margin: 0 0 22px;
+  }
+  .q-prompt .blank{
+    display:inline-block;
+    min-width: 44px;
+    border-bottom: 2.5px solid var(--coral);
+    color:transparent;
+  }
+  .options{
+    display:flex;
+    flex-direction:column;
+    gap: 10px;
+  }
+  .option{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-align:left;
+    background: var(--surface-soft);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 13px 15px;
+    font-size: 15.5px;
+    color: var(--ink);
+    transition: border-color 0.12s ease, background 0.12s ease;
+  }
+  .option:hover:not(.locked){
+    border-color: var(--teal);
+    background: #fff;
+  }
+  .option .letter{
+    font-family: var(--font-display);
+    font-weight:700;
+    font-size:13px;
+    width: 26px; height:26px;
+    border-radius:50%;
+    background: var(--bg-deep);
+    color: var(--ink-soft);
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+  }
+  .option .mark{
+    margin-left:auto;
+    font-size:17px;
+    flex-shrink:0;
+    line-height:1;
+  }
+  .option.correct{
+    background: var(--green-tint);
+    border-color: var(--green);
+    color: var(--green-deep);
+  }
+  .option.correct .letter{ background: var(--green); color:#fff; }
+  .option.wrong{
+    background: var(--coral-tint);
+    border-color: var(--coral);
+    color: var(--coral-deep);
+  }
+  .option.wrong .letter{ background: var(--coral); color:#fff; }
+  .option.dim{ opacity: 0.55; }
+
+  .explain{
+    margin-top: 18px;
+    padding: 15px 16px;
+    border-radius: var(--radius-sm);
+    background: var(--teal-tint);
+    border-left: 3.5px solid var(--teal);
+    font-size: 14.5px;
+    line-height:1.55;
+    color: var(--teal-deep);
+    animation: slideIn 0.25s ease;
+  }
+  .explain b{ color: var(--teal); }
+
+  @keyframes slideIn{
+    from{ opacity:0; transform: translateY(-6px); }
+    to{ opacity:1; transform: translateY(0); }
+  }
+
+  .q-footer{
+    margin-top: 20px;
+    display:flex;
+    justify-content:flex-end;
+  }
+
+  /* ---------- Interstitial / summary screens ---------- */
+  .summary-card{
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    padding: 32px 26px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    text-align:center;
+  }
+  .summary-ring{
+    width: 128px; height:128px;
+    border-radius:50%;
+    margin: 0 auto 18px;
+    display:flex; align-items:center; justify-content:center;
+    flex-direction:column;
+    font-family: var(--font-display);
+    background: conic-gradient(var(--teal) calc(var(--pct) * 1%), var(--bg-deep) 0);
+    position:relative;
+  }
+  .summary-ring::before{
+    content:"";
+    position:absolute;
+    inset:9px;
+    border-radius:50%;
+    background: var(--surface);
+  }
+  .summary-ring b{
+    font-size: 30px;
+    color: var(--ink);
+    position:relative;
+  }
+  .summary-ring span{
+    font-size: 12px;
+    color: var(--ink-soft);
+    position:relative;
+  }
+  .summary-card h2{
+    font-family: var(--font-display);
+    font-size: 22px;
+    margin: 0 0 6px;
+  }
+  .summary-card p.lead{
+    color: var(--ink-soft);
+    font-size: 14.5px;
+    margin: 0 0 20px;
+  }
+
+  .mini-bars{
+    display:flex;
+    flex-direction:column;
+    gap: 10px;
+    text-align:left;
+    margin: 18px 0 6px;
+  }
+  .mini-bar-row{
+    display:grid;
+    grid-template-columns: 1fr 46px;
+    align-items:center;
+    gap:10px;
+  }
+  .mini-bar-label{
+    font-size: 12.5px;
+    color: var(--ink-soft);
+  }
+  .mini-bar-label b{ color: var(--ink); font-weight:600; }
+  .mini-bar-track{
+    grid-column: 1 / -1;
+    height: 8px;
+    background: var(--bg-deep);
+    border-radius:999px;
+    overflow:hidden;
+    margin-top: -4px;
+  }
+  .mini-bar-fill{
+    height:100%;
+    border-radius:999px;
+    background: var(--teal);
+  }
+  .mini-bar-pct{
+    font-family: var(--font-display);
+    font-size:12.5px;
+    font-weight:700;
+    text-align:right;
+    color: var(--ink-soft);
+  }
+
+  .review-list{
+    text-align:left;
+    background: var(--surface-soft);
+    border-radius: var(--radius-md);
+    padding: 16px 18px;
+    margin: 20px 0;
+    border: 1px dashed var(--border);
+  }
+  .review-list h3{
+    font-family: var(--font-display);
+    font-size: 13.5px;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    color: var(--coral-deep);
+    margin: 0 0 10px;
+  }
+  .review-chip{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:999px;
+    padding: 5px 10px 5px 6px;
+    font-size:12.5px;
+    margin: 0 6px 6px 0;
+  }
+  .review-chip .num{
+    background: var(--coral);
+    color:#fff;
+    font-family: var(--font-display);
+    font-weight:700;
+    font-size:11px;
+    border-radius:50%;
+    width:20px;height:20px;
+    display:flex;align-items:center;justify-content:center;
+  }
+
+  .missed-detail{
+    text-align:left;
+    margin: 18px 0;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .missed-item{
+    background: var(--surface-soft);
+    border-left: 3px solid var(--coral);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+  }
+  .missed-item .mi-q{ font-size:14px; margin-bottom:6px; color:var(--ink); }
+  .missed-item .mi-a{ font-size:13px; color: var(--green-deep); margin-bottom:4px; }
+  .missed-item .mi-a b{ color: var(--green-deep); }
+  .missed-item .mi-e{ font-size:13px; color: var(--ink-soft); line-height:1.5; }
+
+  footer.note{
+    text-align:center;
+    font-size: 12.5px;
+    color: var(--ink-faint);
+    margin-top: 40px;
+    line-height:1.6;
+  }
+
+  .explain-term{
+    display:flex;
+    align-items:baseline;
+    gap:8px;
+    font-family: var(--font-display);
+    font-weight:700;
+    font-size: 14.5px;
+    color: var(--teal-deep);
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed rgba(15,76,79,0.25);
+  }
+  .explain-term .pin{ font-size:13px; }
+  .explain-term .tr{ font-weight:500; color: var(--ink-soft); font-family: var(--font-body); font-size:13.5px; }
+
+  /* ---------- Glossary / flashcards ---------- */
+  .glossary-toolbar{
+    display:flex;
+    gap:10px;
+    align-items:center;
+    flex-wrap:wrap;
+    margin-bottom: 20px;
+  }
+  .glossary-select{
+    font-family: var(--font-body);
+    font-size: 14px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    border: 1.5px solid var(--border);
+    background: var(--surface);
+    color: var(--ink);
+    flex:1;
+    min-width: 180px;
+  }
+  .glossary-count{
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    white-space:nowrap;
+  }
+  .glossary-section-heading{
+    font-family: var(--font-display);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing:0.05em;
+    color: var(--teal);
+    margin: 26px 0 10px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .glossary-section-heading:first-child{ margin-top:4px; }
+  .glossary-section-heading .tag{
+    background: var(--teal-tint);
+    padding:3px 8px;
+    border-radius:6px;
+    font-size:11.5px;
+  }
+  .flash-grid{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  @media (min-width:560px){
+    .flash-grid{ grid-template-columns: 1fr 1fr; }
+  }
+  .flash-card{
+    perspective: 900px;
+    height: 108px;
+  }
+  .flash-inner{
+    position:relative;
+    width:100%; height:100%;
+    transition: transform 0.5s cubic-bezier(.4,.2,.2,1);
+    transform-style: preserve-3d;
+    cursor:pointer;
+  }
+  .flash-card.flipped .flash-inner{ transform: rotateY(180deg); }
+  .flash-front, .flash-back{
+    position:absolute; inset:0;
+    backface-visibility:hidden;
+    border-radius: var(--radius-md);
+    border: 1.5px solid var(--border);
+    padding: 14px 16px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+  .flash-front{ background: var(--surface); }
+  .flash-back{
+    background: var(--teal);
+    color:#fff;
+    transform: rotateY(180deg);
+  }
+  .flash-unit{
+    font-family: var(--font-display);
+    font-size: 11px;
+    color: var(--ink-faint);
+    margin-bottom:6px;
+  }
+  .flash-back .flash-unit{ color: rgba(255,255,255,0.65); }
+  .flash-term{
+    font-weight:600;
+    font-size: 16px;
+    color: var(--ink);
+    margin: 0 0 4px;
+    line-height:1.3;
+  }
+  .flash-tap{
+    font-size: 11px;
+    color: var(--ink-faint);
+  }
+  .flash-translation{
+    font-size: 15px;
+    font-weight:500;
+    line-height:1.35;
+    margin:0;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+</style>
+</head>
+<body>
+<div id="app"></div>
+
+<script>
+const QUESTIONS = [{"id":"u1","unit":1,"section":"Present and past","unitTitle":"Present continuous (I am doing)","prompt":"Please be quiet. I ___ to concentrate on my work.","options":["try","am trying","tried","have tried"],"correct":1,"explanation":"Hozirgi paytda davom etayotgan harakat uchun Present Continuous (am/is/are + -ing) ishlatiladi. 'Hozir, gapirayotgan paytda' harakat davom etyapti — shuning uchun 'am trying'.","term":"concentrate on","termUz":"diqqatni jamlamoq, e'tibor qaratmoq"},{"id":"u2","unit":2,"section":"Present and past","unitTitle":"Present simple (I do)","prompt":"Water ___ at 100 degrees Celsius.","options":["is boiling","boil","boils","boiled"],"correct":2,"explanation":"Doimiy haqiqatlar va umumiy faktlar uchun Present Simple ishlatiladi. Uchinchi shaxs birlikda (water = it) fe'lga -s qo'shiladi: boils.","term":"boil","termUz":"qaynamoq"},{"id":"u3","unit":3,"section":"Present and past","unitTitle":"Present continuous and present simple 1","prompt":"Look! That man ___ to open the door of your car.","options":["tries","is trying","try","has tried"],"correct":1,"explanation":"'Look!' so'zi hozir, aynan shu daqiqada sodir bo'layotgan harakatni bildiradi, shuning uchun Present Continuous kerak, doimiy odat emas.","term":"try to do something","termUz":"biror narsa qilishga urinmoq"},{"id":"u4","unit":4,"section":"Present and past","unitTitle":"Present continuous and present simple 2","prompt":"I ___ what you mean, but I don't agree with you.","options":["am seeing","see","am seen","saw"],"correct":1,"explanation":"'See' (tushunmoq ma'nosida), 'know', 'like', 'want' kabi fe'llar holatni bildiradi (state verbs) va odatda Continuous formada ishlatilmaydi.","term":"see (= understand)","termUz":"tushunmoq"},{"id":"u5","unit":5,"section":"Present and past","unitTitle":"Past simple (I did)","prompt":"We ___ to the cinema last Friday.","options":["go","have gone","went","were going"],"correct":2,"explanation":"'Last Friday' — tugallangan, aniq o'tgan payt belgisi, shuning uchun Past Simple (went) ishlatiladi.","term":"go to the cinema","termUz":"kinoga bormoq"},{"id":"u6","unit":6,"section":"Present and past","unitTitle":"Past continuous (I was doing)","prompt":"I saw Helen at the party. She ___ a really nice dress.","options":["wore","was wearing","is wearing","wears"],"correct":1,"explanation":"O'tgan paytda davom etayotgan holatni tasvirlash uchun Past Continuous (was/were + -ing) ishlatiladi — o'sha payt kiyimda edi.","term":"wear","termUz":"kiymoq, kiyib yurmoq"},{"id":"u7","unit":7,"section":"Present perfect and past","unitTitle":"Present perfect 1 (I have done)","prompt":"'Have you ever been to Japan?' 'No, I ___ there.'","options":["never went","have never been","never was","am never being"],"correct":1,"explanation":"Umr davomidagi tajriba (aniq vaqt ko'rsatilmagan) haqida gapirganda Present Perfect (have/has + V3) ishlatiladi: have never been.","term":"have you ever...?","termUz":"hech qachon ...bo'lganmisiz? (tajriba)"},{"id":"u8","unit":8,"section":"Present perfect and past","unitTitle":"Present perfect 2 (I have done)","prompt":"Sarah ___ her keys. She can't get into her flat.","options":["lost","has lost","loses","was losing"],"correct":1,"explanation":"O'tmishdagi harakat hozirgi natijaga ega bo'lsa (kalitlarni yo'qotgani hozir ta'sir qilyapti), Present Perfect ishlatiladi.","term":"lose — lost — lost","termUz":"yo'qotmoq"},{"id":"u9","unit":9,"section":"Present perfect and past","unitTitle":"Present perfect continuous (I have been doing)","prompt":"You're out of breath. ___ ?","options":["Did you run","Have you been running","Are you running","Do you run"],"correct":1,"explanation":"Yaqinda tugagan, lekin natijasi hozir ko'rinib turgan davomli harakat uchun Present Perfect Continuous (have been + -ing) ishlatiladi.","term":"be out of breath","termUz":"nafasi qisilmoq, hansiramoq"},{"id":"u10","unit":10,"section":"Present perfect and past","unitTitle":"Present perfect continuous and simple","prompt":"She ___ six cups of coffee today (and it's only midday!).","options":["has been drinking","has drunk","is drinking","drank"],"correct":1,"explanation":"Nechta/qancha (how many/how much) — natija muhim bo'lganda Present Perfect Simple ishlatiladi, davomiylik emas: has drunk six cups.","term":"drink — drank — drunk","termUz":"ichmoq"},{"id":"u11","unit":11,"section":"Present perfect and past","unitTitle":"how long have you (been) …?","prompt":"How long ___ each other?","options":["do you know","have you known","are you knowing","did you know"],"correct":1,"explanation":"'Know' holat fe'li bo'lgani uchun Continuous emas, Present Perfect Simple bilan 'How long have you known...?' deyiladi.","term":"know somebody","termUz":"birovni tanimoq, bilmoq"},{"id":"u12","unit":12,"section":"Present perfect and past","unitTitle":"for and since when …? and how long …?","prompt":"I haven't seen Tom ___ Monday.","options":["for","since","from","during"],"correct":1,"explanation":"Aniq boshlanish nuqtasi (Monday) ko'rsatilganda 'since' ishlatiladi; 'for' esa davomiylik/muddat bilan ishlatiladi (for three days).","term":"since / for","termUz":"since — beri (aniq nuqta); for — davomida (muddat)"},{"id":"u13","unit":13,"section":"Present perfect and past","unitTitle":"Present perfect and past 1","prompt":"'Is Sarah here?' 'No, she ___ out.'","options":["has gone","went","is going","has been going"],"correct":0,"explanation":"Aniq o'tgan vaqt aytilmagan, hozirgi holatga (u hozir yo'q) ta'sir qiladi — shuning uchun Present Perfect: has gone out.","term":"go out","termUz":"tashqariga chiqmoq, ketmoq"},{"id":"u14","unit":14,"section":"Present perfect and past","unitTitle":"Present perfect and past 2","prompt":"I ___ this book yesterday evening.","options":["have finished","finished","have been finishing","was finishing"],"correct":1,"explanation":"'Yesterday evening' — aniq, tugallangan o'tgan payt, shu sababli Present Perfect emas, Past Simple ishlatiladi: finished.","term":"finish","termUz":"tugatmoq"},{"id":"u15","unit":15,"section":"Present perfect and past","unitTitle":"Past perfect (I had done)","prompt":"When I arrived at the party, Kate ___ already ___.","options":["has / left","had / left","was / leaving","did / leave"],"correct":1,"explanation":"Ikkita o'tgan harakatdan oldingisi uchun Past Perfect (had + V3) ishlatiladi: Kate kelishimdan OLDIN ketgan edi — had left.","term":"already","termUz":"allaqachon"},{"id":"u16","unit":16,"section":"Present perfect and past","unitTitle":"Past perfect continuous (I had been doing)","prompt":"Sam was tired when he got home. He ___ all day.","options":["was working","had been working","has been working","worked"],"correct":1,"explanation":"O'tgan paytdagi holatdan OLDIN davom etgan harakat uchun Past Perfect Continuous (had been + -ing) ishlatiladi.","term":"be tired","termUz":"charchagan bo'lmoq"},{"id":"u17","unit":17,"section":"Present perfect and past","unitTitle":"have and have got","prompt":"Choose the correct alternative: 'Do you have a car?' means the same as ___","options":["Have you a car?","Have you got a car?","Are you having a car?","Have you had a car?"],"correct":1,"explanation":"'Have got' — 'have'ning ingliz tilida keng tarqalgan so'zlashuv sinonimi: Have you got a car? = Do you have a car?","term":"have got","termUz":"ega bo'lmoq ('have'ning so'zlashuv shakli)"},{"id":"u18","unit":18,"section":"Present perfect and past","unitTitle":"used to (do)","prompt":"I ___ live in London, but I moved to Bristol a few years ago.","options":["use to","used to","am used to","was using"],"correct":1,"explanation":"O'tmishda muntazam bo'lib, hozir bo'lmaydigan odat/holat haqida gapirganda 'used to + infinitive' ishlatiladi.","term":"used to do","termUz":"avvallari ...qilar edim (hozir emas)"},{"id":"u19","unit":19,"section":"Future","unitTitle":"Present tenses for the future","prompt":"What time ___ tomorrow evening?","options":["will your train arrive","does your train arrive","is your train arriving","your train arrives"],"correct":2,"explanation":"Kelajakdagi rejalashtirilgan jadval/dastur (poezd jadvali) uchun Present Continuous ishlatilishi mumkin: is arriving.","term":"arrive","termUz":"yetib kelmoq"},{"id":"u20","unit":20,"section":"Future","unitTitle":"I'm going to (do)","prompt":"I feel terrible. I think I ___ sick.","options":["will be","am going to be","am being","be"],"correct":1,"explanation":"Hozirgi holatga qarab kelajakda nima bo'lishini aytib bo'ladigan holatlar uchun 'be going to' ishlatiladi (alomatlar hozir bor).","term":"be going to","termUz":"...moqchi bo'lmoq (reja/kelajak)"},{"id":"u21","unit":21,"section":"Future","unitTitle":"will and shall 1","prompt":"I'm too tired to walk home. I think I ___ a taxi.","options":["am getting","get","will get","am going to getting"],"correct":2,"explanation":"Gapirish paytida qaror qilinayotgan (spontan) kelajak reja uchun 'will' ishlatiladi: I think I'll get a taxi.","term":"get a taxi","termUz":"taksi tutmoq"},{"id":"u22","unit":22,"section":"Future","unitTitle":"will and shall 2","prompt":"___ I open the window? It's a bit hot in here.","options":["Will","Shall","Do","Am"],"correct":1,"explanation":"Taklif qilish yoki ruxsat so'rash uchun 'Shall I …?' qolipi ishlatiladi (Shall I open…? = Xohlaysizmi men ochsam?).","term":"Shall I...?","termUz":"...aylikmi? (taklif so'rash)"},{"id":"u23","unit":23,"section":"Future","unitTitle":"I will and I'm going to","prompt":"a: 'Did you post that letter for me?' b: 'Oh, sorry, I completely forgot. ___ now.'","options":["I'm going to do it","I'll do it","I do it","I'm doing it"],"correct":1,"explanation":"Gapirish payti qaror qilingan tezkor va'da/qaror uchun 'will' ishlatiladi, oldindan rejalashtirilgan 'going to' emas.","term":"post a letter","termUz":"xat jo'natmoq"},{"id":"u24","unit":24,"section":"Future","unitTitle":"will be doing and will have done","prompt":"Don't phone at 8.30 — I ___ dinner then.","options":["will have","will be having","have","will having"],"correct":1,"explanation":"Kelajakda ma'lum bir vaqtda davom etayotgan harakat uchun Future Continuous (will be + -ing) ishlatiladi: will be having dinner.","term":"have dinner","termUz":"kechki ovqat yemoq"},{"id":"u25","unit":25,"section":"Future","unitTitle":"when I do and when I've done / if and when","prompt":"I'll call you as soon as I ___ home.","options":["will get","get","am getting","will have got"],"correct":1,"explanation":"When/as soon as/before kabi vaqt bog'lovchilaridan keyingi ergash gapda kelajak uchun 'will' emas, Present Simple ishlatiladi.","term":"as soon as","termUz":"...gan zahoti, darhol"},{"id":"u26","unit":26,"section":"Modals","unitTitle":"can, could and (be) able to","prompt":"I used to ___ stand on my head when I was a child, but I can't do it now.","options":["can","could","be able to","being able to"],"correct":1,"explanation":"O'tmishdagi umumiy qobiliyat haqida 'could' ishlatiladi. Bitta muvaffaqiyatli holat uchun esa 'was able to' ishlatiladi.","term":"be able to","termUz":"qodir bo'lmoq, ...a olmoq"},{"id":"u27","unit":27,"section":"Modals","unitTitle":"could (do) and could have (done)","prompt":"Why didn't you come to the party? You ___ a great time.","options":["could have","could","can have","can"],"correct":0,"explanation":"O'tmishda bajarilmagan imkoniyat haqida afsuslanishda 'could have + V3' ishlatiladi: could have had a great time.","term":"could have done","termUz":"...(gan) bo'lardim (o'tgan imkoniyat)"},{"id":"u28","unit":28,"section":"Modals","unitTitle":"must and can't","prompt":"You've been travelling all day. You ___ be tired.","options":["can't","must","should","needn't"],"correct":1,"explanation":"Nimadir aniq/ishonchli deb hisoblaganda 'must' ishlatiladi (mantiqiy xulosa): must be tired.","term":"must (= I'm sure)","termUz":"shubhasiz, albatta ...(mantiqiy xulosa)"},{"id":"u29","unit":29,"section":"Modals","unitTitle":"may and might 1","prompt":"I can't find my glasses anywhere. I ___ left them at work.","options":["must","may have","mustn't","can"],"correct":1,"explanation":"O'tmishdagi ehtimoliy (aniq bo'lmagan) izoh uchun 'may have / might have + V3' ishlatiladi.","term":"may have done","termUz":"ehtimol ...bo'lgandir"},{"id":"u30","unit":30,"section":"Modals","unitTitle":"may and might 2","prompt":"'Are you going to Ben's party?' 'I'm not sure. ___ go.'","options":["I might","I can","I must","I should"],"correct":0,"explanation":"Kelajakdagi ehtimollik (aniq bo'lmagan reja) uchun 'might/may' ishlatiladi: I might go.","term":"might","termUz":"balki, ehtimol"},{"id":"u31","unit":31,"section":"Modals","unitTitle":"have to and must","prompt":"I didn't want to go to the meeting, but I ___ .","options":["mustn't","must","had to","have to"],"correct":2,"explanation":"O'tgan zamonda majburiyat uchun 'must'ning o'tgan shakli yo'q, o'rniga 'had to' ishlatiladi.","term":"had to","termUz":"...ga majbur bo'ldim"},{"id":"u32","unit":32,"section":"Modals","unitTitle":"must mustn't needn't","prompt":"You ___ tell Sam what I said. It's a secret between us.","options":["don't have to","needn't","mustn't","don't need to"],"correct":2,"explanation":"'Mustn't' — taqiq (bunday qilma!) ma'nosini beradi. 'Needn't/don't have to' esa 'kerak emas' degan zaruriyat yo'qligini bildiradi — bu yerda taqiq kerak.","term":"mustn't","termUz":"...ma! (taqiq)"},{"id":"u33","unit":33,"section":"Modals","unitTitle":"should 1","prompt":"It's a good film. You ___ go and see it.","options":["should","must","can","need"],"correct":0,"explanation":"Maslahat berish uchun 'should' ishlatiladi ('must'ga qaraganda yumshoqroq tavsiya).","term":"should","termUz":"...ish kerak (maslahat)"},{"id":"u34","unit":34,"section":"Modals","unitTitle":"should 2","prompt":"I wonder why she hasn't texted back. She ___ my message by now.","options":["should get","should have got","must get","should getting"],"correct":1,"explanation":"O'tmishda kutilgan, lekin ehtimol sodir bo'lmagan narsa haqida 'should have + V3' ishlatiladi.","term":"should have done","termUz":"...ishi kerak edi (lekin qilmadi)"},{"id":"u35","unit":35,"section":"Modals","unitTitle":"I'd better … it's time …","prompt":"It's 11 o'clock. It's time ___ home.","options":["we go","we went","we will go","we going"],"correct":1,"explanation":"'It's time' dan keyin fe'l Past Simple shaklida keladi, garchi ma'no hozirgi/kelajakka tegishli bo'lsa ham: It's time we went.","term":"it's time","termUz":"vaqti keldi"},{"id":"u36","unit":36,"section":"Modals","unitTitle":"would","prompt":"If I had a lot of money, I ___ travel around the world.","options":["will","would","can","must"],"correct":1,"explanation":"Xayoliy (real bo'lmagan) shart gapning natija qismida 'would' ishlatiladi.","term":"would","termUz":"...gan bo'lardim (xayoliy natija)"},{"id":"u37","unit":37,"section":"Modals","unitTitle":"can/could/would you …? (requests, offers)","prompt":"___ you pass me the salt, please?","options":["Do","Are","Could","Must"],"correct":2,"explanation":"Iltimos qilishning odobli shakli — 'Could you …?' — 'Do you' dan ko'ra ancha xushmuomalaroq so'roq shakli.","term":"Could you...?","termUz":"Iltimos qila olasizmi?"},{"id":"u38","unit":38,"section":"if and wish","unitTitle":"if I do … and if I did …","prompt":"What would you do if you ___ a lot of money?","options":["win","won","will win","would win"],"correct":1,"explanation":"Xayoliy/kam ehtimolli hozirgi-kelajak shart uchun 'if + Past Simple, ... would' qolipi ishlatiladi: if you won.","term":"if + past simple","termUz":"agar ...bo'lsa (xayoliy shart)"},{"id":"u39","unit":39,"section":"if and wish","unitTitle":"if I knew … I wish I knew …","prompt":"I wish I ___ how to fix this problem, but I have no idea.","options":["know","knew","have known","will know"],"correct":1,"explanation":"Hozirgi holatdan norozilik/istak bildirishda 'wish + Past Simple' ishlatiladi: I wish I knew (lekin bilmayman).","term":"I wish + past simple","termUz":"...bo'lsa edi (hozirgi holatdan afsus)"},{"id":"u40","unit":40,"section":"if and wish","unitTitle":"if I had known … I wish I had known …","prompt":"If I ___ you were ill, I would have visited you.","options":["knew","had known","have known","know"],"correct":1,"explanation":"O'tmishdagi real bo'lmagan shart (uchinchi tur shart gap) uchun 'if + Past Perfect, ... would have + V3' ishlatiladi.","term":"if + past perfect","termUz":"agar ...bo'lganida (o'tmishdagi shart)"},{"id":"u41","unit":41,"section":"if and wish","unitTitle":"wish","prompt":"It's raining again. I wish it ___ raining.","options":["stops","stopped","would stop","stop"],"correct":2,"explanation":"Boshqa birov/vaziyat o'zgarishini istaganda 'wish + would' ishlatiladi — his-hayajon/noroziliqni bildiradi: I wish it would stop.","term":"I wish + would","termUz":"...gan bo'lsa edi (o'zgarishni istash)"},{"id":"u42","unit":42,"section":"Passive","unitTitle":"Passive 1 (is done / was done)","prompt":"Many accidents ___ by careless driving.","options":["cause","are caused","caused","causing"],"correct":1,"explanation":"Ish kim tomonidan bajarilishi muhim bo'lmasa, majhul nisbat (be + V3) ishlatiladi: are caused by.","term":"be caused by","termUz":"sabab bo'lmoq"},{"id":"u43","unit":43,"section":"Passive","unitTitle":"Passive 2 (be done / been done / being done)","prompt":"My car ___ at the moment, so I came by bus.","options":["is repairing","is being repaired","has repaired","repairs"],"correct":1,"explanation":"Hozir davom etayotgan jarayonning majhul shakli 'is/are being + V3' bo'ladi: is being repaired.","term":"be being repaired","termUz":"hozir ta'mirlanmoqda"},{"id":"u44","unit":44,"section":"Passive","unitTitle":"Passive 3","prompt":"I was surprised that I ___ to the interview.","options":["wasn't invited","didn't invite","wasn't inviting","hadn't invited"],"correct":0,"explanation":"Bu yerda gap egasi (I) harakatni bajarmayapti, unga nisbatan bajarilmoqda — shuning uchun majhul shakl: wasn't invited.","term":"be invited","termUz":"taklif qilinmoq"},{"id":"u45","unit":45,"section":"Passive","unitTitle":"it is said that … he is said to … he is supposed to …","prompt":"He is supposed ___ a lot of money, but he lives quite simply.","options":["to have","having","have","to having"],"correct":0,"explanation":"'be supposed to' dan keyin infinitiv keladi; o'tmishga tegishli bo'lsa 'to have + V3' shaklida: is supposed to have.","term":"be supposed to","termUz":"deb hisoblanadi, faraz qilinadi"},{"id":"u46","unit":46,"section":"Passive","unitTitle":"have something done","prompt":"I don't cut my own hair. I ___ cut by a hairdresser.","options":["have it","have","am having","have it done"],"correct":3,"explanation":"Boshqa birov siz uchun biror ishni bajarganda 'have something done' qolipi ishlatiladi: have it cut/have it done.","term":"have something done","termUz":"(birovga) qildirmoq"},{"id":"u47","unit":47,"section":"Reported speech","unitTitle":"Reported speech 1 (he said that …)","prompt":"Direct speech: Paul said, 'I am feeling ill.' Reported speech: Paul said that he ___ feeling ill.","options":["is","was","has been","will be"],"correct":1,"explanation":"Ko'chirma gapda asosiy fe'l o'tgan zamonda bo'lsa (said), 'am/is' — 'was'ga o'zgaradi.","term":"say that","termUz":"demoq, aytmoq"},{"id":"u48","unit":48,"section":"Reported speech","unitTitle":"Reported speech 2","prompt":"Direct: 'I'll call you tomorrow,' she said. Reported: She said (that) she ___ me the next day.","options":["will call","would call","calls","was calling"],"correct":1,"explanation":"Ko'chirma gapga o'tganda 'will' — 'would'ga o'zgaradi, va 'tomorrow' — 'the next day' bo'ladi.","term":"would (in reported speech)","termUz":"ko'chirma gapda 'will' o'rniga"},{"id":"u49","unit":49,"section":"Questions and auxiliary verbs","unitTitle":"Questions 1","prompt":"Who ___ the window? (asking who did it)","options":["did break","broke","did broke","was broken"],"correct":1,"explanation":"'Who' savol egasi bo'lganda, so'roq so'zidan keyin 'do/did' qo'shilmaydi, fe'l to'g'ridan-to'g'ri keladi: Who broke the window?","term":"break (broke)","termUz":"sindirmoq"},{"id":"u50","unit":50,"section":"Questions and auxiliary verbs","unitTitle":"Questions 2 (do you know where …?)","prompt":"Do you know what time ___?","options":["does the film start","the film starts","is the film starting","start the film"],"correct":1,"explanation":"Ichki (yashirin) savolda so'z tartibi to'g'ridan-to'g'ri gapdagidek bo'ladi (do/does yordamchisi qo'shilmaydi): what time the film starts.","term":"Do you know what time...?","termUz":"Soat nechadaligini bilasizmi?"},{"id":"u51","unit":51,"section":"Questions and auxiliary verbs","unitTitle":"Auxiliary verbs / I think so, I hope so","prompt":"'Are you tired?' 'I don't ___ .'","options":["think so","think it","think that","not think"],"correct":0,"explanation":"Qisqa javob berishda 'I think so / I hope so / I don't think so' kabi qisqartma qoliplar ishlatiladi.","term":"I don't think so","termUz":"Yo'q deb o'ylayman"},{"id":"u52","unit":52,"section":"Questions and auxiliary verbs","unitTitle":"Question tags (do you? isn't it?)","prompt":"You haven't seen this film, ___?","options":["have you","haven't you","did you","didn't you"],"correct":0,"explanation":"Bosh gap salbiy (haven't) bo'lsa, tag-savol ijobiy bo'ladi: haven't seen ... have you?","term":"question tag","termUz":"tasdiqlash so'rovi (..., isn't it?)"},{"id":"u53","unit":53,"section":"-ing and to …","unitTitle":"Verb + -ing (enjoy doing / stop doing)","prompt":"I enjoy ___ to music while I'm working.","options":["listen","to listen","listening","listened"],"correct":2,"explanation":"'Enjoy' fe'lidan keyin gerundiy (-ing) shakli keladi: enjoy listening.","term":"enjoy doing","termUz":"qilishdan zavqlanmoq"},{"id":"u54","unit":54,"section":"-ing and to …","unitTitle":"Verb + to … (decide to / forget to)","prompt":"It was late, so we decided ___ a taxi home.","options":["taking","take","to take","took"],"correct":2,"explanation":"'Decide' fe'lidan keyin infinitiv (to + fe'l) keladi: decided to take.","term":"decide to do","termUz":"qilishga qaror qilmoq"},{"id":"u55","unit":55,"section":"-ing and to …","unitTitle":"Verb (+ object) + to … (I want you to …)","prompt":"I didn't want anybody ___ what had happened.","options":["knowing","know","to know","knew"],"correct":2,"explanation":"'Want somebody to do something' qolipi: fe'l + shaxs + to + infinitiv: want anybody to know.","term":"want somebody to do","termUz":"birovning ...qilishini xohlamoq"},{"id":"u56","unit":56,"section":"-ing and to …","unitTitle":"Verb + -ing or to … 1 (remember, regret)","prompt":"I remember ___ this photo — it was a beautiful day.","options":["to take","taking","take","took"],"correct":1,"explanation":"'Remember doing' — o'tmishda sodir bo'lgan va eslab qolgan harakat: remember taking (rasmni olganimni eslayman).","term":"remember doing","termUz":"qilganini eslamoq"},{"id":"u57","unit":57,"section":"-ing and to …","unitTitle":"Verb + -ing or to … 2 (try, need, help)","prompt":"The room was cold, so I tried ___ the heating on.","options":["turning","to turn","turn","turned"],"correct":1,"explanation":"'Try to do' — biror qiyin ishga harakat qilish ma'nosida: tried to turn (isitgichni yoqishga harakat qildim).","term":"try to do","termUz":"qilishga harakat qilmoq"},{"id":"u58","unit":58,"section":"-ing and to …","unitTitle":"Verb + -ing or to … 3 (like / would like)","prompt":"I'd like ___ to Japan next year.","options":["going","to go","go","gone"],"correct":1,"explanation":"'Would like to do' — aniq bir istak/reja haqida gapirganda infinitiv ishlatiladi: would like to go.","term":"would like to do","termUz":"qilishni istardim"},{"id":"u59","unit":59,"section":"-ing and to …","unitTitle":"prefer and would rather","prompt":"'Shall we get a taxi?' 'I'd rather ___ — it's not far.'","options":["to walk","walking","walk","walked"],"correct":2,"explanation":"'Would rather' dan keyin 'to'siz infinitiv (bare infinitive) keladi: would rather walk.","term":"would rather","termUz":"ko'proq ...ni afzal ko'raman"},{"id":"u60","unit":60,"section":"-ing and to …","unitTitle":"Preposition + -ing","prompt":"Are you interested ___ for this job?","options":["to apply","apply","in applying","in apply"],"correct":2,"explanation":"Predlogdan (in/for/about) keyin fe'l -ing shaklida keladi: interested in applying.","term":"be interested in","termUz":"qiziqmoq"},{"id":"u61","unit":61,"section":"-ing and to …","unitTitle":"be/get used to … (I'm used to …)","prompt":"I found it hard to get used ___ on the left when I moved to the UK.","options":["to drive","driving","to driving","drive"],"correct":2,"explanation":"'Be/get used to' dagi 'to' predlog bo'lgani uchun undan keyin -ing keladi: used to driving (haydashga o'rganish).","term":"get used to","termUz":"o'rganib qolmoq"},{"id":"u62","unit":62,"section":"-ing and to …","unitTitle":"Verb + preposition + -ing (succeed in -ing)","prompt":"In the end, we succeeded ___ a solution to the problem.","options":["to find","finding","in finding","find"],"correct":2,"explanation":"'Succeed in doing something' qolipida 'in' predlogidan keyin -ing keladi: succeeded in finding.","term":"succeed in","termUz":"muvaffaqiyatga erishmoq"},{"id":"u63","unit":63,"section":"-ing and to …","unitTitle":"there's no point in -ing, it's worth -ing","prompt":"There's no point ___ him. He never answers his phone.","options":["to call","calling","call","in call"],"correct":1,"explanation":"'There's no point in doing something' qolipida 'in' ko'pincha tushirilib qoladi, lekin fe'l -ing shaklida qoladi: no point calling.","term":"there's no point in","termUz":"foydasi/ma'nosi yo'q"},{"id":"u64","unit":64,"section":"-ing and to …","unitTitle":"to …, for … and so that …","prompt":"I'm saving money ___ buy a new car.","options":["for","so that","to","for to"],"correct":2,"explanation":"Maqsadni bildirish uchun oddiy infinitiv (to + fe'l) ishlatiladi: to buy. 'For' esa keyin ot (noun) yoki -ing keladi.","term":"to (purpose)","termUz":"...ish uchun (maqsad)"},{"id":"u65","unit":65,"section":"-ing and to …","unitTitle":"Adjective + to …","prompt":"I was disappointed ___ that Kate couldn't come to the party.","options":["hearing","to hear","hear","for hear"],"correct":1,"explanation":"His-tuyg'u bildiruvchi sifatlardan (disappointed, glad, surprised) keyin infinitiv keladi: disappointed to hear.","term":"be disappointed to","termUz":"hafsalasi pir bo'lmoq"},{"id":"u66","unit":66,"section":"-ing and to …","unitTitle":"to … (afraid to do) and preposition + -ing (afraid of -ing)","prompt":"I like the people I work with, but I'm not afraid ___ my opinion if I disagree with them.","options":["of giving","to give","give","of give"],"correct":1,"explanation":"'Afraid to do' — jasorat kerak bo'lgan harakatni bajarishdan tortinish: afraid to give (fikrimni aytishdan qo'rqmayman).","term":"be afraid to do","termUz":"qilishdan qo'rqmoq"},{"id":"u67","unit":67,"section":"-ing and to …","unitTitle":"see somebody do and see somebody doing","prompt":"I saw Kate ___ across the road just before the accident happened.","options":["walking","to walk","walked","walks"],"correct":0,"explanation":"Harakatning bir qismini/jarayonini ko'rganda 'see somebody doing' (-ing) ishlatiladi.","term":"see somebody doing","termUz":"birovni ...qilayotganini ko'rmoq"},{"id":"u68","unit":68,"section":"-ing and to …","unitTitle":"-ing clauses (He hurt his knee playing football.)","prompt":"___ for the bus, I saw an old friend of mine.","options":["While waiting","While I wait","During waiting","For waiting"],"correct":0,"explanation":"Ikki harakat bir vaqtda bir subyekt tomonidan bajarilganda, qisqartirilgan -ing gap ishlatiladi: While waiting (kutayotganimda).","term":"while + -ing","termUz":"...ayotgan paytda"},{"id":"u69","unit":69,"section":"Articles and nouns","unitTitle":"Countable and uncountable 1","prompt":"Can I have ___ , please?","options":["an information","some informations","some information","informations"],"correct":2,"explanation":"'Information' — sanalmaydigan ot (uncountable), ko'plik shakli yo'q va 'a/an' bilan ishlatilmaydi: some information.","term":"information","termUz":"ma'lumot"},{"id":"u70","unit":70,"section":"Articles and nouns","unitTitle":"Countable and uncountable 2","prompt":"I'd like ___ bread, please.","options":["a","a piece of","one","the piece"],"correct":1,"explanation":"Sanalmaydigan otni sanash uchun maxsus so'z birikmasi kerak: a piece of bread.","term":"a piece of","termUz":"bir bo'lak"},{"id":"u71","unit":71,"section":"Articles and nouns","unitTitle":"Countable nouns with a/an and some","prompt":"There's ___ orange in the fridge if you're hungry.","options":["a","an","some","the"],"correct":1,"explanation":"'Orange' unli tovush bilan boshlanadi, shuning uchun 'a' emas, 'an' ishlatiladi.","term":"orange","termUz":"apelsin"},{"id":"u72","unit":72,"section":"Articles and nouns","unitTitle":"a/an and the","prompt":"I bought ___ shirt yesterday, but ___ shirt was too small.","options":["a / the","the / a","a / a","the / the"],"correct":0,"explanation":"Birinchi marta tilga olinganda 'a' (noaniq artikl), keyin xuddi shu narsa haqida gapirganda 'the' (aniq artikl) ishlatiladi.","term":"a / the","termUz":"noaniq / aniq artikl"},{"id":"u73","unit":73,"section":"Articles and nouns","unitTitle":"the 1","prompt":"___ sun is a star.","options":["A","--(no article)","The","An"],"correct":2,"explanation":"Dunyoda yagona bo'lgan narsalar (the sun, the moon, the world) doim 'the' bilan ishlatiladi.","term":"the sun","termUz":"quyosh"},{"id":"u74","unit":74,"section":"Articles and nouns","unitTitle":"the 2 (school / the school)","prompt":"Tom's brother is in prison. Tom often goes to ___ to visit him.","options":["the prison","prison","a prison","prisons"],"correct":0,"explanation":"Bu yerda maqsad qamoqxonaga TASHRIF buyurish, mahbus sifatida borish emas — shu sababli 'the prison' ishlatiladi.","term":"prison","termUz":"qamoqxona"},{"id":"u75","unit":75,"section":"Articles and nouns","unitTitle":"the 3 (children / the children)","prompt":"___ life is impossible without water.","options":["The life","Life","A life","Lives"],"correct":1,"explanation":"Umumiy ma'noda (barcha hayot haqida) gapirganda sanalmaydigan otdan oldin artikl qo'yilmaydi: Life (umuman).","term":"life","termUz":"hayot"},{"id":"u76","unit":76,"section":"Articles and nouns","unitTitle":"the 4 (the giraffe / the telephone / the old)","prompt":"___ giraffe is the tallest of all animals.","options":["A","--(no article)","The","Some"],"correct":2,"explanation":"Butun bir turni (hayvon turi sifatida) umumlashtirib gapirganda 'the + birlik ot' ishlatilishi mumkin: The giraffe.","term":"giraffe","termUz":"jirafa"},{"id":"u77","unit":77,"section":"Articles and nouns","unitTitle":"Names with and without the 1","prompt":"Have you ever been to ___ United States?","options":["--(no article)","a","the","an"],"correct":2,"explanation":"Respublika/shtatlar birlashmasini bildiruvchi davlat nomlari (United States, UK, Netherlands) 'the' bilan ishlatiladi.","term":"the United States","termUz":"Amerika Qo'shma Shtatlari"},{"id":"u78","unit":78,"section":"Articles and nouns","unitTitle":"Names with and without the 2","prompt":"We visited ___ Louvre when we were in Paris.","options":["a","the","--(no article)","an"],"correct":1,"explanation":"Muzey, teatr, galereya kabi jamoat binolarining aksariyat nomlari 'the' bilan ishlatiladi: the Louvre.","term":"the Louvre","termUz":"Luvr muzeyi"},{"id":"u79","unit":79,"section":"Articles and nouns","unitTitle":"Singular and plural","prompt":"Police ___ investigating the robbery.","options":["is","are","was","has been"],"correct":1,"explanation":"'Police' so'zi shaklan birlik bo'lsada, ma'nosi ko'plik va ko'plik fe'l bilan ishlatiladi: police are.","term":"police","termUz":"politsiya (ko'plikdek ishlatiladi)"},{"id":"u80","unit":80,"section":"Articles and nouns","unitTitle":"Noun + noun (a bus driver / a headache)","prompt":"We waited at the ___ stop for twenty minutes.","options":["buses","bus's","bus","bus'"],"correct":2,"explanation":"Ikki ot yonma-yon kelib birikma hosil qilganda, birinchi ot odatda birlikda qoladi: bus stop.","term":"bus stop","termUz":"avtobus bekati"},{"id":"u81","unit":81,"section":"Articles and nouns","unitTitle":"-'s and of …","prompt":"What's ___ ?","options":["the name of this street","this street's name","the street name of","of this street the name"],"correct":0,"explanation":"Jonsiz narsalar uchun ('s emas) 'of' konstruksiyasi ko'proq ishlatiladi: the name of this street.","term":"the name of...","termUz":"...ning nomi"},{"id":"u82","unit":82,"section":"Pronouns and determiners","unitTitle":"myself/yourself/themselves etc.","prompt":"Kate hurt ___ while she was playing tennis.","options":["her","herself","hers","she"],"correct":1,"explanation":"Harakatning ta'siri gap egasining o'ziga qaytganda refleksiv olmosh ishlatiladi: hurt herself.","term":"hurt yourself","termUz":"o'zini jarohatlab olmoq"},{"id":"u83","unit":83,"section":"Pronouns and determiners","unitTitle":"a friend of mine, my own house, on my own/by myself","prompt":"I'd like to have ___ apartment instead of sharing with roommates.","options":["a mine","my own","the own","of my own an"],"correct":1,"explanation":"'my own + ot' — 'faqat menga tegishli' ma'nosini beradi: my own apartment.","term":"my own (+ noun)","termUz":"faqat o'zimga tegishli"},{"id":"u84","unit":84,"section":"Pronouns and determiners","unitTitle":"there … and it …","prompt":"'What's the weather like today?' '___ raining.'","options":["There's","It's","This is","That's"],"correct":1,"explanation":"Ob-havo haqida gapirganda gap egasi sifatida 'it' ishlatiladi: It's raining.","term":"It's raining","termUz":"Yomg'ir yog'yapti"},{"id":"u85","unit":85,"section":"Pronouns and determiners","unitTitle":"some and any","prompt":"I didn't have ___ money, so I couldn't buy anything.","options":["some","any","no","much a"],"correct":1,"explanation":"Salbiy gaplarda odatda 'some' emas, 'any' ishlatiladi: didn't have any money.","term":"any","termUz":"hech qanday (salbiy gapda)"},{"id":"u86","unit":86,"section":"Pronouns and determiners","unitTitle":"no/none/any, nothing/nobody etc.","prompt":"'How much money have you got?' '___ .'","options":["No","Any","None","Not any"],"correct":2,"explanation":"Savolga qisqa javob berishda ('nothing' ma'nosida) 'none' mustaqil ishlatiladi.","term":"none","termUz":"hech biri ham"},{"id":"u87","unit":87,"section":"Pronouns and determiners","unitTitle":"much, many, little, few, a lot, plenty","prompt":"She's very busy these days. She's got very ___ free time.","options":["few","a few","little","a little"],"correct":2,"explanation":"Sanalmaydigan otlar bilan 'kam/deyarli yo'q' ma'nosida 'little' ishlatiladi (salbiy ohang): little free time.","term":"little","termUz":"juda kam (deyarli yo'q)"},{"id":"u88","unit":88,"section":"Pronouns and determiners","unitTitle":"all/all of, most/most of, no/none of etc.","prompt":"___ of the people at the party were friends of Andy's.","options":["Most","Almost","Mostly","The most"],"correct":0,"explanation":"'Most of + the/these/my ...' qolipida aniqlovchidan oldin 'most' ishlatiladi (almost emas): Most of the people.","term":"most of","termUz":"...ning ko'pchiligi"},{"id":"u89","unit":89,"section":"Pronouns and determiners","unitTitle":"both/both of, neither/neither of, either/either of","prompt":"___ of us was hungry, so we didn't eat anything.","options":["Both","Neither","All","None"],"correct":1,"explanation":"Ikki narsa/kishi haqida salbiy ma'noda gapirganda 'neither' (ikkalasi ham ...emas) ishlatiladi.","term":"neither","termUz":"ikkalasi ham ...emas"},{"id":"u90","unit":90,"section":"Pronouns and determiners","unitTitle":"all, every, whole","prompt":"I've spent the ___ day cleaning the house.","options":["every","all","whole","each"],"correct":2,"explanation":"'The whole + birlik ot' — butun/hammasi ma'nosida: the whole day (butun kun).","term":"the whole day","termUz":"butun kun"},{"id":"u91","unit":91,"section":"Pronouns and determiners","unitTitle":"each and every","prompt":"___ time I see you, you look different!","options":["Every","All","Each of","Whole"],"correct":0,"explanation":"'Every time' — sodir bo'ladigan har safar ma'nosida keng qo'llaniladigan ibora.","term":"every time","termUz":"har safar"},{"id":"u92","unit":92,"section":"Relative clauses","unitTitle":"Relative clauses 1: who/that/which","prompt":"The woman ___ lives next door is a doctor.","options":["she","who","whom","what"],"correct":1,"explanation":"Odam haqida gapirganda va nisbiy gapda ega (subject) o'rnida 'who' ishlatiladi.","term":"who (relative pronoun)","termUz":"kim (odamlar uchun nisbiy olmosh)"},{"id":"u93","unit":93,"section":"Relative clauses","unitTitle":"Relative clauses 2: with and without who/that/which","prompt":"Where's the money ___ I gave you?","options":["who","--(can be left out)","whose","--(cannot be left out)"],"correct":1,"explanation":"Nisbiy olmosh gapda TO'LDIRUVCHI (object) vazifasini bajarsa, ko'pincha tushirib qoldirilishi mumkin: the money (that/which) I gave you.","term":"the money I gave you","termUz":"men senga bergan pul"},{"id":"u94","unit":94,"section":"Relative clauses","unitTitle":"Relative clauses 3: whose/whom/where","prompt":"That's the woman ___ car was stolen last week.","options":["who","whom","whose","which"],"correct":2,"explanation":"Egalik ma'nosini bildirish uchun ('uning mashinasi') 'whose' ishlatiladi.","term":"whose","termUz":"kimning (egalik)"},{"id":"u95","unit":95,"section":"Relative clauses","unitTitle":"Relative clauses 4: extra information clauses (1)","prompt":"My sister, ___ lives in Paris, is coming to visit next week.","options":["that","who","she who","--(no word)"],"correct":1,"explanation":"Qo'shimcha (ajratilgan, vergul bilan ajratilgan) ma'lumot beruvchi gapda 'that' emas, faqat 'who/which' ishlatiladi.","term":"extra information clause","termUz":"qo'shimcha ma'lumot beruvchi gap"},{"id":"u96","unit":96,"section":"Relative clauses","unitTitle":"Relative clauses 5: extra information clauses (2)","prompt":"Amy showed me a photo of her son, ___ made me feel old.","options":["that","what","which","who"],"correct":2,"explanation":"Butun bir gapga izoh berish uchun (vergul bilan) 'which' ishlatiladi, aniq bir otga emas.","term":"which (whole sentence)","termUz":"bu esa... (butun gapga izoh)"},{"id":"u97","unit":97,"section":"Relative clauses","unitTitle":"-ing and -ed clauses","prompt":"Do you know the woman ___ to Andy over there?","options":["talks","talked","who talking","talking"],"correct":3,"explanation":"Hozir davom etayotgan harakatni qisqartirib tasvirlash uchun -ing gap ishlatiladi: the woman talking to Andy.","term":"talking to somebody","termUz":"birov bilan gaplashayotgan"},{"id":"u98","unit":98,"section":"Adjectives and adverbs","unitTitle":"Adjectives ending in -ing and -ed (boring/bored)","prompt":"The lecture was so ___ that several students fell asleep.","options":["bored","boring","bore","bores"],"correct":1,"explanation":"Narsa/vaziyat qanday ta'sir qilishini bildirganda -ing shakli ishlatiladi: boring (zerikarli). -ed shakli esa kishining his-tuyg'usini bildiradi.","term":"boring","termUz":"zerikarli"},{"id":"u99","unit":99,"section":"Adjectives and adverbs","unitTitle":"Adjectives: a nice new house, you look tired","prompt":"You look ___ . What's wrong?","options":["tiredly","tired","tiring","to tired"],"correct":1,"explanation":"'Look/feel/seem' kabi fe'llardan keyin ravish emas, sifat keladi: look tired.","term":"look tired","termUz":"charchagandek ko'rinmoq"},{"id":"u100","unit":100,"section":"Adjectives and adverbs","unitTitle":"Adjectives and adverbs 1 (quick/quickly)","prompt":"She speaks English very ___ .","options":["good","well","goodly","best"],"correct":1,"explanation":"Fe'lni ('speaks') tavsiflash uchun ravish (adverb) kerak: 'good'ning ravishi — well.","term":"well","termUz":"yaxshi (good'ning ravish shakli)"},{"id":"u101","unit":101,"section":"Adjectives and adverbs","unitTitle":"Adjectives and adverbs 2 (well, fast, late, hard/hardly)","prompt":"I searched everywhere for my keys, but I could ___ find them.","options":["hard","hardly","hardly not","not hardly"],"correct":1,"explanation":"'Hardly' — 'deyarli...emas' ma'nosidagi mustaqil ravish (hard'dan farqli): could hardly find (deyarli topolmadim).","term":"hardly","termUz":"deyarli ...emas"},{"id":"u102","unit":102,"section":"Adjectives and adverbs","unitTitle":"so and such","prompt":"It was ___ a boring film that I fell asleep.","options":["so","such","so a","too"],"correct":1,"explanation":"Ot (film) oldida sifat bilan birga bo'lsa 'such a' ishlatiladi: such a boring film.","term":"such a","termUz":"shunday bir"},{"id":"u103","unit":103,"section":"Adjectives and adverbs","unitTitle":"enough and too","prompt":"This coffee is ___ hot for me to drink.","options":["too","enough","so","very"],"correct":0,"explanation":"'Ortiqcha darajada, salbiy natijaga olib keladigan' ma'noda 'too' ishlatiladi: too hot (juda issiq, icha olmayman).","term":"too (+ adj)","termUz":"haddan tashqari, juda"},{"id":"u104","unit":104,"section":"Adjectives and adverbs","unitTitle":"quite, pretty, rather, fairly","prompt":"It's ___ cold today — you'd better wear a coat.","options":["quite","enough","too much","so"],"correct":0,"explanation":"O'rtacha darajadagi kuchaytiruvchi so'z sifatida 'quite' ishlatilishi mumkin: quite cold (anchagina sovuq).","term":"quite","termUz":"ancha, birmuncha"},{"id":"u105","unit":105,"section":"Adjectives and adverbs","unitTitle":"Comparative 1 (cheaper, more expensive)","prompt":"This exercise is ___ than the last one.","options":["more difficult","difficulter","more difficulter","most difficult"],"correct":0,"explanation":"Ikki-uch bo'g'inli va undan uzun sifatlarning qiyosiy darajasi 'more + sifat' orqali yasaladi: more difficult.","term":"more difficult","termUz":"qiyinroq"},{"id":"u106","unit":106,"section":"Adjectives and adverbs","unitTitle":"Comparative 2 (much better / any better)","prompt":"This bag is ___ bigger than the one I had before.","options":["very","much","more","so"],"correct":1,"explanation":"Qiyosiy darajani kuchaytirish uchun 'much/a lot/far' ishlatiladi, 'very' emas: much bigger.","term":"much bigger","termUz":"ancha katta"},{"id":"u107","unit":107,"section":"Adjectives and adverbs","unitTitle":"Comparative 3 (as … as / than)","prompt":"I don't earn ___ money as you.","options":["as much","as many","so much as","as such"],"correct":0,"explanation":"Sanalmaydigan otlar bilan tenglik/qiyoslash uchun 'as much + ot + as' ishlatiladi.","term":"as much ... as","termUz":"...cha, ...dek (tenglik)"},{"id":"u108","unit":108,"section":"Adjectives and adverbs","unitTitle":"Superlative (the longest, the most enjoyable)","prompt":"It was ___ day of my life.","options":["more happy","the happiest","happiest","most happy"],"correct":1,"explanation":"Orttirma daraja odatda 'the' bilan ishlatiladi: the happiest day.","term":"the happiest","termUz":"eng baxtli"},{"id":"u109","unit":109,"section":"Adjectives and adverbs","unitTitle":"Word order 1: verb + object; place and time","prompt":"Choose the correctly ordered sentence.","options":["I bought yesterday a new phone.","I bought a new phone yesterday.","Yesterday I a new phone bought.","I a new phone bought yesterday."],"correct":1,"explanation":"Fe'l + to'ldiruvchi odatda birga keladi, ular orasiga vaqt/o'rin qo'yilmaydi: bought a new phone yesterday.","term":"word order","termUz":"so'zlar tartibi"},{"id":"u110","unit":110,"section":"Adjectives and adverbs","unitTitle":"Word order 2: adverbs with the verb","prompt":"I ___ drink coffee in the evening.","options":["never almost","almost never","never much","much never"],"correct":1,"explanation":"Chastota ravishlari (always/often/never) yordamchi fe'l bo'lmasa, asosiy fe'ldan OLDIN keladi: almost never drink.","term":"almost never","termUz":"deyarli hech qachon"},{"id":"u111","unit":111,"section":"Adjectives and adverbs","unitTitle":"still, any more/yet/already","prompt":"Are you ___ working for the same company, or have you changed jobs?","options":["yet","already","still","any more"],"correct":2,"explanation":"Bir holat kutilganidan uzoqroq davom etayotganini bildirish uchun 'still' ishlatiladi.","term":"still","termUz":"hali ham"},{"id":"u112","unit":112,"section":"Adjectives and adverbs","unitTitle":"even","prompt":"He always wears a coat, ___ in hot weather.","options":["still","even","yet","already"],"correct":1,"explanation":"Kutilmagan/hayratlanarli holatni ta'kidlash uchun 'even' ishlatiladi: even in hot weather (hatto issiq havoda ham).","term":"even","termUz":"hatto"},{"id":"u113","unit":113,"section":"Conjunctions and prepositions","unitTitle":"although/though/even though, in spite of/despite","prompt":"___ the rain, we enjoyed our walk.","options":["Although","Despite","Even though","Because"],"correct":1,"explanation":"'Despite/in spite of' dan keyin ot yoki -ing keladi (bog'lovchi gap emas): despite the rain. 'Although' dan keyin esa to'liq gap keladi.","term":"despite","termUz":"...ga qaramasdan"},{"id":"u114","unit":114,"section":"Conjunctions and prepositions","unitTitle":"in case","prompt":"I'll leave my phone on ___ Jack calls.","options":["if","in case","unless","when"],"correct":1,"explanation":"'In case' — ehtiyot chorasi, ehtimoliy holat uchun oldindan tayyorgarlik ma'nosini beradi: in case Jack calls (agar qo'ng'iroq qilsa deb).","term":"in case","termUz":"agar-chi deb, ehtiyot uchun"},{"id":"u115","unit":115,"section":"Conjunctions and prepositions","unitTitle":"unless, as long as, provided","prompt":"I'll come to the party ___ I have to work late.","options":["unless","as long as","provided","in case"],"correct":0,"explanation":"'Unless' = 'if...not': agar ishlashga to'g'ri kelmasa (ishlamasam) boraman.","term":"unless","termUz":"agar ...bo'lmasa"},{"id":"u116","unit":116,"section":"Conjunctions and prepositions","unitTitle":"as (as I walked … / as I was …)","prompt":"___ I was walking home, it started to rain.","options":["While","During","As","For"],"correct":2,"explanation":"Ikki harakat bir vaqtda sodir bo'lganda 'as' (o'sha payt/paytda) bog'lovchisi ishlatilishi mumkin.","term":"as (= while)","termUz":"...gan paytda"},{"id":"u117","unit":117,"section":"Conjunctions and prepositions","unitTitle":"like and as","prompt":"___ I said before, I really think we should wait.","options":["Like","As","Such as","Alike"],"correct":1,"explanation":"'As I said' — jumla shaklidagi qurilmalarda ('...gandek') 'as' ishlatiladi, 'like' emas.","term":"as (+ job/role)","termUz":"sifatida (kasb, vazifa)"},{"id":"u118","unit":118,"section":"Conjunctions and prepositions","unitTitle":"like / as if","prompt":"She's a great singer. She sings ___ she was a professional.","options":["like","as","as if","such as"],"correct":2,"explanation":"'Look/sound/seem/feel + as if' — go'yo, xuddi shundaydek ma'noni beradi: sings as if she was a professional.","term":"as if","termUz":"go'yoki, xuddi ...dek"},{"id":"u119","unit":119,"section":"Conjunctions and prepositions","unitTitle":"during, for, while","prompt":"I fell asleep ___ the movie.","options":["while","during","for","meanwhile"],"correct":1,"explanation":"'During' dan keyin ot (the movie) keladi. 'While' esa ergash gap (subject+verb) bilan ishlatiladi.","term":"during","termUz":"davomida"},{"id":"u120","unit":120,"section":"Conjunctions and prepositions","unitTitle":"by and until, by the time …","prompt":"I have to finish this report ___ Friday.","options":["until","by","during","since"],"correct":1,"explanation":"Ma'lum muddatgacha bir marta bajarilishi kerak bo'lgan harakat uchun 'by' ishlatiladi (Juma kunigacha tugatilishi kerak).","term":"by (+ deadline)","termUz":"...gacha (muddat)"},{"id":"u121","unit":121,"section":"Prepositions","unitTitle":"at/on/in (time)","prompt":"My birthday is ___ 5 April.","options":["at","in","on","by"],"correct":2,"explanation":"Aniq kunlar va sanalar bilan 'on' ishlatiladi: on 5 April.","term":"on + date","termUz":"kun va sanalarda 'on'"},{"id":"u122","unit":122,"section":"Prepositions","unitTitle":"on time / in time, at the end / in the end","prompt":"The train departed ___ time — not a minute late.","options":["on","in","at","by"],"correct":0,"explanation":"'On time' — aniq belgilangan vaqtda, kechikmasdan degan ma'noni beradi.","term":"on time","termUz":"belgilangan vaqtida, aniq"},{"id":"u123","unit":123,"section":"Prepositions","unitTitle":"in/at/on (position) 1","prompt":"When I arrived, David was waiting ___ the corner of the street.","options":["in","on","at","by"],"correct":2,"explanation":"Aniq nuqta (burchak, chorraha) haqida gapirganda 'at' ishlatiladi: at the corner.","term":"at the corner","termUz":"burchakda"},{"id":"u124","unit":124,"section":"Prepositions","unitTitle":"in/at/on (position) 2","prompt":"I read about it ___ the newspaper this morning.","options":["at","on","in","by"],"correct":2,"explanation":"Gazeta, kitob, xat kabi yozma manbalar ichida degan ma'noda 'in' ishlatiladi: in the newspaper.","term":"in the newspaper","termUz":"gazetada"},{"id":"u125","unit":125,"section":"Prepositions","unitTitle":"in/at/on (position) 3","prompt":"I saw an old friend of mine ___ the bus this morning.","options":["at","in","on","by"],"correct":2,"explanation":"Jamoat transporti (bus/train/plane) ichida bo'lish uchun 'on' ishlatiladi: on the bus.","term":"on the bus","termUz":"avtobusda"},{"id":"u126","unit":126,"section":"Prepositions","unitTitle":"to, at, in and into","prompt":"What time did you arrive ___ the airport?","options":["to","at","into","in"],"correct":1,"explanation":"'Arrive at' — kichikroq joy/nuqta (airport, hotel, station) uchun ishlatiladi; katta joy/mamlakat uchun esa 'arrive in'.","term":"arrive at","termUz":"yetib kelmoq (kichik joyga)"},{"id":"u127","unit":127,"section":"Prepositions","unitTitle":"in/on/at (other uses)","prompt":"Is there anything good ___ TV tonight?","options":["at","in","on","by"],"correct":2,"explanation":"'On TV / on the radio' — efirda, translyatsiyada degan ma'noda turg'un ishlatiladigan predlog birikmasi.","term":"on TV","termUz":"televizorda"},{"id":"u128","unit":128,"section":"Prepositions","unitTitle":"by","prompt":"Do you usually go to work ___ car?","options":["with","in","by","on"],"correct":2,"explanation":"Transport turini bildirishda 'by' ishlatiladi: by car/by bus/by train (lekin: on foot).","term":"by car","termUz":"mashinada (transport turi)"},{"id":"u129","unit":129,"section":"Prepositions","unitTitle":"Noun + preposition (reason for, cause of)","prompt":"What was the reason ___ the delay?","options":["of","for","from","with"],"correct":1,"explanation":"'Reason for something' — turg'un birikma: the reason for the delay.","term":"the reason for","termUz":"...ning sababi"},{"id":"u130","unit":130,"section":"Prepositions","unitTitle":"Adjective + preposition 1 (nice of, kind to)","prompt":"It was very kind ___ you to help me carry these bags.","options":["from","of","with","to"],"correct":1,"explanation":"'Nice/kind/generous/stupid + OF + somebody (to do something)' — xulq-atvorni baholashda: kind of you.","term":"kind of you","termUz":"sizning mehribonligingiz"},{"id":"u131","unit":131,"section":"Prepositions","unitTitle":"Adjective + preposition 2 (afraid of, married to)","prompt":"Are you ___ spiders?","options":["afraid with","afraid from","afraid of","afraid for"],"correct":2,"explanation":"'Afraid of something/somebody' — nimadan qo'rqish predlogi doim 'of'.","term":"afraid of","termUz":"-dan qo'rqish"},{"id":"u132","unit":132,"section":"Prepositions","unitTitle":"Verb + preposition 1: to and at","prompt":"Please listen carefully ___ what I'm going to say.","options":["at","to","for","with"],"correct":1,"explanation":"'Listen to something/somebody' — turg'un fe'l+predlog birikmasi.","term":"listen to","termUz":"quloq solmoq, tinglamoq"},{"id":"u133","unit":133,"section":"Prepositions","unitTitle":"Verb + preposition 2: about/for/of/after","prompt":"Can you look ___ my cat while I'm away?","options":["after","for","at","of"],"correct":0,"explanation":"'Look after somebody/something' — g'amxo'rlik qilmoq, qaramoq ma'nosidagi turg'un birikma.","term":"look after","termUz":"g'amxo'rlik qilmoq, qaramoq"},{"id":"u134","unit":134,"section":"Prepositions","unitTitle":"Verb + preposition 3: about and of","prompt":"I've never heard ___ that band before.","options":["for","about","of","from"],"correct":2,"explanation":"'Hear of somebody/something' — birovning/narsaning mavjudligidan xabardor bo'lish: never heard of that band.","term":"hear of","termUz":"eshitgan, xabardor bo'lmoq"},{"id":"u135","unit":135,"section":"Prepositions","unitTitle":"Verb + preposition 4: of/for/from/on","prompt":"The number of road accidents has increased. This is mainly due ___ the volume of traffic.","options":["of","for","to","from"],"correct":2,"explanation":"'Due to something' — sabab bo'lishi ma'nosidagi turg'un birikma.","term":"due to","termUz":"sababli, tufayli"},{"id":"u136","unit":136,"section":"Prepositions","unitTitle":"Verb + preposition 5: in/into/with/to/on","prompt":"We're relying ___ you to organise the event.","options":["in","on","with","to"],"correct":1,"explanation":"'Rely on somebody' — birovga tayanmoq, ishonmoq ma'nosidagi turg'un birikma.","term":"rely on","termUz":"tayanmoq, ishonmoq"},{"id":"u137","unit":137,"section":"Phrasal verbs","unitTitle":"Phrasal verbs 1: Introduction","prompt":"Sorry I'm late. The car ___ on the way here.","options":["broke down","broke up","broke off","broke out"],"correct":0,"explanation":"'Break down' — mashina/mexanizm ishlamay qolishi ma'nosidagi frazal fe'l.","term":"break down","termUz":"(mashina) ishdan chiqmoq"},{"id":"u138","unit":138,"section":"Phrasal verbs","unitTitle":"Phrasal verbs 2: in/out","prompt":"I filled ___ the application form and sent it off.","options":["in","out","up","on"],"correct":0,"explanation":"'Fill in a form' — blank/anketani to'ldirish ma'nosidagi frazal fe'l (Britaniyacha ingliz tilida keng qo'llaniladi).","term":"fill in","termUz":"(forma) to'ldirmoq"},{"id":"u139","unit":139,"section":"Phrasal verbs","unitTitle":"Phrasal verbs 3: out","prompt":"I couldn't solve the puzzle, so I asked a friend to help me ___ it ___.","options":["work / out","work / up","find / out","look / for"],"correct":0,"explanation":"'Work something out' — o'ylab, hisoblab yechim topish ma'nosidagi frazal fe'l.","term":"work out","termUz":"yechim topmoq, hisoblab chiqmoq"},{"id":"u140","unit":140,"section":"Phrasal verbs","unitTitle":"Phrasal verbs 4: on/off (1)","prompt":"It's dark in here. Can you ___ the light?","options":["turn on","turn off","turn up","turn out"],"correct":0,"explanation":"'Turn on' — biror asbobni yoqish ma'nosidagi frazal fe'l.","term":"turn on","termUz":"yoqmoq (asbob)"},{"id":"u141","unit":141,"section":"Phrasal verbs","unitTitle":"Phrasal verbs 5: on/off (2)","prompt":"The trip was ___ because of bad weather.","options":["called off","called on","called out","called up"],"correct":0,"explanation":"'Call something off' — rejalashtirilgan tadbirni bekor qilish ma'nosidagi frazal fe'l.","term":"call off","termUz":"bekor qilmoq"},{"id":"u142","unit":142,"section":"Phrasal verbs","unitTitle":"Phrasal verbs 6: up/down","prompt":"Prices have ___ a lot recently — everything is so expensive now.","options":["gone up","gone down","gone off","gone out"],"correct":0,"explanation":"'Go up' — narx/miqdor oshishi ma'nosidagi frazal fe'l.","term":"go up","termUz":"oshmoq, ko'tarilmoq (narx)"},{"id":"u143","unit":143,"section":"Phrasal verbs","unitTitle":"Phrasal verbs 7: up (1)","prompt":"I didn't understand the word, so I looked it ___ in the dictionary.","options":["up","out","for","after"],"correct":0,"explanation":"'Look something up' — lug'at yoki manbadan biror ma'lumot qidirib topish ma'nosidagi frazal fe'l.","term":"look up","termUz":"(lug'atdan) qidirib topmoq"},{"id":"u144","unit":144,"section":"Phrasal verbs","unitTitle":"Phrasal verbs 8: up (2)","prompt":"I'm trying to ___ smoking — it's a difficult habit to break.","options":["give up","give in","give out","give away"],"correct":0,"explanation":"'Give up doing something' — biror odatni tashlash, undan voz kechish ma'nosidagi frazal fe'l.","term":"give up","termUz":"tashlamoq, voz kechmoq (odat)"},{"id":"u145","unit":145,"section":"Phrasal verbs","unitTitle":"Phrasal verbs 9: away/back","prompt":"I don't need this old chair any more. I'm going to throw it ___.","options":["away","back","off","up"],"correct":0,"explanation":"'Throw something away' — keraksiz narsani tashlab yuborish ma'nosidagi frazal fe'l.","term":"throw away","termUz":"tashlab yubormoq"},{"id":"v1","unit":48,"section":"Vocabulary Challenge","unitTitle":"say and tell (Unit 48C)","prompt":"Rachel ___ me that you were in hospital.","options":["said","told","spoke","talked"],"correct":1,"explanation":"Kimga aytilgani ko'rsatilsa (me), 'tell' ishlatiladi: told me. 'Say' dan keyin to'g'ridan-to'g'ri shaxs kelmaydi (say TO somebody).","term":"tell somebody","termUz":"birovga aytmoq"},{"id":"v2","unit":48,"section":"Vocabulary Challenge","unitTitle":"say and tell (Unit 48D)","prompt":"The doctor ___ me to drink plenty of water.","options":["said","told","spoke","explained"],"correct":1,"explanation":"'Tell somebody to do something' — buyruq/tavsiyani ko'chirma gapda berish uchun ishlatiladigan qolip.","term":"tell somebody to do","termUz":"birovga buyurmoq, tavsiya qilmoq"},{"id":"v3","unit":117,"section":"Vocabulary Challenge","unitTitle":"like and as (Unit 117)","prompt":"Kate works ___ a translator for a large company.","options":["like","as","such as","alike"],"correct":1,"explanation":"Kimningdir haqiqiy kasbi/vazifasi haqida gapirganda 'as' ishlatiladi: works as a translator (u tarjimon bo'lib ishlaydi).","term":"work as","termUz":"...sifatida ishlamoq"},{"id":"v4","unit":119,"section":"Vocabulary Challenge","unitTitle":"during, for, while (Unit 119)","prompt":"We didn't go out much ___ our stay in Rome.","options":["while","during","for","meanwhile"],"correct":1,"explanation":"'During + ot' — ma'lum bir davr ichida degan ma'noda: during our stay (turgan davrimiz ichida).","term":"during","termUz":"davomida"},{"id":"v5","unit":122,"section":"Vocabulary Challenge","unitTitle":"on time and in time (Unit 122)","prompt":"I like to arrive at the airport in good time — not just ___ , but with time to spare.","options":["on time","in time","by time","at time"],"correct":1,"explanation":"'In time (for something)' — kechikmasdan, biror narsa boshlanguncha yetib kelish; 'on time' esa aniq belgilangan payt haqida.","term":"in time (for something)","termUz":"ulgurib, kech qolmasdan"},{"id":"v6","unit":129,"section":"Vocabulary Challenge","unitTitle":"Noun + preposition (Unit 129)","prompt":"I don't think there's any solution ___ this problem.","options":["of","to","for","with"],"correct":1,"explanation":"'A solution to a problem' — turg'un ot+predlog birikmasi.","term":"a solution to","termUz":"...ning yechimi"},{"id":"v7","unit":129,"section":"Vocabulary Challenge","unitTitle":"Noun + preposition (Unit 129)","prompt":"Do you know the reason ___ her sudden decision to leave?","options":["of","for","from","about"],"correct":1,"explanation":"'The reason for something' — sababni bildiruvchi turg'un birikma (reason of emas).","term":"the reason for","termUz":"...ning sababi"},{"id":"v8","unit":131,"section":"Vocabulary Challenge","unitTitle":"Adjective + preposition (Unit 131)","prompt":"Jill is very good ___ her job — she never makes mistakes.","options":["in","at","with","for"],"correct":1,"explanation":"'Good/bad at something' — mahoratni bildiruvchi turg'un birikma: good at her job.","term":"good at","termUz":"...da mohir, yaxshi bilaman"},{"id":"v9","unit":131,"section":"Vocabulary Challenge","unitTitle":"Adjective + preposition (Unit 131)","prompt":"This town is famous ___ its old university.","options":["of","for","with","from"],"correct":1,"explanation":"'Famous for something' — nima uchun mashhurligini bildiruvchi turg'un birikma.","term":"famous for","termUz":"...bilan mashhur"},{"id":"v10","unit":132,"section":"Vocabulary Challenge","unitTitle":"Verb + preposition (Unit 132)","prompt":"I wrote ___ the company, but they never replied.","options":["at","to","for","with"],"correct":1,"explanation":"'Write to somebody' — kimgadir yozish ma'nosidagi fe'l+predlog birikmasi.","term":"write to somebody","termUz":"birovga yozmoq"},{"id":"v11","unit":133,"section":"Vocabulary Challenge","unitTitle":"Verb + preposition (Unit 133)","prompt":"What happened to the money you borrowed? What did you spend it ___?","options":["for","on","with","of"],"correct":1,"explanation":"'Spend money on something' — pulni nimagadir sarflash ma'nosidagi turg'un birikma.","term":"spend money on","termUz":"pulni ...ga sarflamoq"},{"id":"v12","unit":134,"section":"Vocabulary Challenge","unitTitle":"Verb + preposition (Unit 134)","prompt":"We talked ___ a lot of things at the meeting.","options":["of","about","for","with"],"correct":1,"explanation":"'Talk about something' — biror mavzu haqida gaplashish ma'nosidagi turg'un birikma.","term":"talk about","termUz":"...haqida gaplashmoq"},{"id":"v13","unit":135,"section":"Vocabulary Challenge","unitTitle":"Verb + preposition (Unit 135)","prompt":"I don't approve ___ what you did, but I understand why you did it.","options":["for","of","with","about"],"correct":1,"explanation":"'Approve of something' — biror ish/qarorni ma'qullash ma'nosidagi turg'un birikma.","term":"approve of","termUz":"ma'qullamoq"},{"id":"v14","unit":136,"section":"Vocabulary Challenge","unitTitle":"Verb + preposition (Unit 136)","prompt":"I don't want to get ___ an argument with you, so let's change the subject.","options":["into","in","with","on"],"correct":0,"explanation":"'Get into an argument/trouble' — nomaqbul vaziyatga tushib qolish ma'nosidagi turg'un birikma.","term":"get into an argument","termUz":"janjalga aralashib qolmoq"},{"id":"v15","unit":138,"section":"Vocabulary Challenge","unitTitle":"Phrasal verbs: in/out (Unit 138)","prompt":"I'd like to ___ this dress. Can I use the changing room?","options":["try on","try out","try up","try off"],"correct":0,"explanation":"'Try something on' — kiyimni kiyib ko'rish ma'nosidagi frazal fe'l.","term":"try on","termUz":"(kiyim) kiyib ko'rmoq"},{"id":"v16","unit":139,"section":"Vocabulary Challenge","unitTitle":"Phrasal verbs: out (Unit 139)","prompt":"It took the fire brigade three hours to ___ the fire.","options":["put in","put out","put off","put up"],"correct":1,"explanation":"'Put out a fire' — yong'inni o'chirish ma'nosidagi frazal fe'l.","term":"put out (a fire)","termUz":"(olovni) o'chirmoq"},{"id":"v17","unit":140,"section":"Vocabulary Challenge","unitTitle":"Phrasal verbs: on/off (Unit 140)","prompt":"The wedding has been ___ — they've decided to get married next year instead.","options":["put off","put on","put out","put up"],"correct":0,"explanation":"'Put something off' — tadbirni keyingi vaqtga qoldirish ma'nosidagi frazal fe'l.","term":"put off","termUz":"kechiktirmoq, keyinga qoldirmoq"},{"id":"v18","unit":142,"section":"Vocabulary Challenge","unitTitle":"Phrasal verbs: up/down (Unit 142)","prompt":"Can you ___ the radio? I can't hear the news properly.","options":["turn down","turn up","turn over","turn out"],"correct":1,"explanation":"'Turn up' — ovoz balandligini oshirish ma'nosidagi frazal fe'l.","term":"turn up","termUz":"ovozni balandlatmoq"},{"id":"v19","unit":144,"section":"Vocabulary Challenge","unitTitle":"Phrasal verbs: up (Unit 144)","prompt":"I was brought ___ by my grandparents after my parents passed away.","options":["up","on","out","in"],"correct":0,"explanation":"'Bring somebody up' — bolani tarbiyalab voyaga yetkazish ma'nosidagi frazal fe'l.","term":"bring up","termUz":"tarbiyalamoq, voyaga yetkazmoq"},{"id":"v20","unit":145,"section":"Vocabulary Challenge","unitTitle":"Phrasal verbs: away/back (Unit 145)","prompt":"I lent Tom some money last month, and he still hasn't ___ it.","options":["given back","given away","given up","given in"],"correct":0,"explanation":"'Give something back' — qarz olingan narsani qaytarib berish ma'nosidagi frazal fe'l.","term":"give back","termUz":"qaytarib bermoq"},{"id":"v21","unit":126,"section":"Vocabulary Challenge","unitTitle":"to, at, in and into (Unit 126)","prompt":"What time did the plane arrive ___ Madrid?","options":["at","to","into","on"],"correct":2,"explanation":"Katta joy/shahar/mamlakatga kelib tushish uchun 'arrive in'ga o'xshab, harakatni ta'kidlash uchun 'into' ham ishlatiladi: fly into Madrid.","term":"arrive into / fly into","termUz":"(parvoz bilan) yetib kelmoq"},{"id":"v22","unit":128,"section":"Vocabulary Challenge","unitTitle":"by (Unit 128)","prompt":"This play was written ___ Shakespeare.","options":["from","by","of","with"],"correct":1,"explanation":"Muallif/ijodkorni ko'rsatishda 'by' ishlatiladi: written by Shakespeare.","term":"written by","termUz":"...tomonidan yozilgan"},{"id":"v23","unit":130,"section":"Vocabulary Challenge","unitTitle":"Adjective + preposition (Unit 130)","prompt":"I'm really looking forward ___ the weekend.","options":["for","to","at","of"],"correct":1,"explanation":"'Look forward to something' — intiqlik bilan kutish ma'nosidagi turg'un birikma; 'to' bu yerda predlog, keyin ot yoki -ing keladi.","term":"look forward to","termUz":"intiqlik bilan kutmoq"},{"id":"v24","unit":143,"section":"Vocabulary Challenge","unitTitle":"Phrasal verbs: up (Unit 143)","prompt":"The company was ___ in 1990 by two brothers.","options":["set up","set out","set off","set down"],"correct":0,"explanation":"'Set up a company/business' — kompaniya/tashkilotni tashkil qilish, asos solish ma'nosidagi frazal fe'l.","term":"set up","termUz":"tashkil qilmoq, asos solmoq"}];
+
+const SECTION_META = {
+  "Present and past": { uz: "Hozirgi va o'tgan zamonlar", icon: "1" },
+  "Present perfect and past": { uz: "Present Perfect va o'tgan zamon", icon: "2" },
+  "Future": { uz: "Kelasi zamon", icon: "3" },
+  "Modals": { uz: "Modal fe'llar", icon: "4" },
+  "if and wish": { uz: "Shart ergash gaplar va 'wish'", icon: "5" },
+  "Passive": { uz: "Majhul nisbat", icon: "6" },
+  "Reported speech": { uz: "Ko'chirma gap", icon: "7" },
+  "Questions and auxiliary verbs": { uz: "Savollar va yordamchi fe'llar", icon: "8" },
+  "-ing and to …": { uz: "Gerundiy va infinitiv", icon: "9" },
+  "Articles and nouns": { uz: "Artikllar va otlar", icon: "10" },
+  "Pronouns and determiners": { uz: "Olmosh va aniqlovchilar", icon: "11" },
+  "Relative clauses": { uz: "Nisbiy ergash gaplar", icon: "12" },
+  "Adjectives and adverbs": { uz: "Sifat va ravishlar", icon: "13" },
+  "Conjunctions and prepositions": { uz: "Bog'lovchilar (although, unless...)", icon: "14" },
+  "Prepositions": { uz: "Predloglar (joy, vaqt)", icon: "15" },
+  "Phrasal verbs": { uz: "Frazal fe'llar", icon: "16" },
+  "Vocabulary Challenge": { uz: "Qo'shimcha lug'at mashqlari", icon: "★" }
+};
+
+// Build ordered section list + question groups from QUESTIONS (preserves file order)
+const SECTION_ORDER = [];
+const BY_SECTION = {};
+QUESTIONS.forEach(q => {
+  if(!BY_SECTION[q.section]){ BY_SECTION[q.section] = []; SECTION_ORDER.push(q.section); }
+  BY_SECTION[q.section].push(q);
+});
+
+function unitRangeLabel(section){
+  if(section === "Vocabulary Challenge") return "Qo'shimcha";
+  const units = BY_SECTION[section].map(q => q.unit);
+  const min = Math.min(...units), max = Math.max(...units);
+  return min === max ? ("Unit " + min) : ("Unit " + min + "–" + max);
+}
+
+// ---------------- App State ----------------
+let state = {
+  screen: "home",       // home | quiz | sectionResult | finalResult | glossary
+  mode: null,            // "full" | "section" | "review"
+  queue: [],             // ordered question objects for this run
+  qIndex: 0,
+  selected: null,        // selected option index for current question
+  answered: false,
+  runAnswers: {},        // id -> {selectedIndex, correct}  (this run only)
+  allAnswers: {},         // id -> {selectedIndex, correct}  (persists across whole session, for dashboard)
+  currentSectionName: null,
+  sectionStartIdxInFull: 0,
+  glossaryFilter: "all"
+};
+
+function openGlossary(){
+  state.screen = "glossary";
+  render();
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+
+function setGlossaryFilter(value){
+  state.glossaryFilter = value;
+  render();
+}
+
+function startRun(mode, questions, sectionName){
+  state.mode = mode;
+  state.queue = questions;
+  state.qIndex = 0;
+  state.selected = null;
+  state.answered = false;
+  state.runAnswers = {};
+  state.currentSectionName = sectionName || (questions[0] ? questions[0].section : null);
+  state.screen = "quiz";
+  render();
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+
+function startFullTest(){
+  startRun("full", QUESTIONS.slice());
+}
+
+function startSection(sectionName){
+  startRun("section", BY_SECTION[sectionName].slice(), sectionName);
+}
+
+function startReviewMistakes(){
+  const missedIds = Object.keys(state.allAnswers).filter(id => !state.allAnswers[id].correct);
+  const qs = QUESTIONS.filter(q => missedIds.includes(q.id));
+  if(qs.length === 0) return;
+  startRun("review", qs);
+}
+
+function selectOption(idx){
+  if(state.answered) return;
+  const q = state.queue[state.qIndex];
+  const correct = idx === q.correct;
+  state.selected = idx;
+  state.answered = true;
+  state.runAnswers[q.id] = {selectedIndex: idx, correct};
+  state.allAnswers[q.id] = {selectedIndex: idx, correct};
+  render();
+}
+
+function nextQuestion(){
+  const isLastInQueue = state.qIndex >= state.queue.length - 1;
+  const currentSection = state.queue[state.qIndex].section;
+  const nextSectionName = !isLastInQueue ? state.queue[state.qIndex+1].section : null;
+
+  if(!isLastInQueue && nextSectionName === currentSection){
+    state.qIndex++;
+    state.selected = null;
+    state.answered = false;
+    render();
+    window.scrollTo({top:0, behavior:"smooth"});
+    return;
+  }
+
+  // Reached the end of the current section, or the end of the whole queue.
+  // Always show a result screen for what was just completed; only "full"
+  // mode with more sections remaining continues straight into the next one.
+  state.screen = "sectionResult";
+  state._pendingNextSection = (state.mode === "full" && !!nextSectionName && nextSectionName !== currentSection);
+  render();
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+
+function continueAfterSectionResult(){
+  if(state._pendingNextSection){
+    state.qIndex++;
+    state.selected = null;
+    state.answered = false;
+    state.currentSectionName = state.queue[state.qIndex].section;
+    state.screen = "quiz";
+  } else if(state.mode === "full"){
+    // last section of the full run just finished -> show whole-book dashboard
+    state.screen = "finalResult";
+  } else {
+    // a single section or a mistakes-review run just finished
+    state.screen = "home";
+  }
+  render();
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+
+function retryRun(){
+  startRun(state.mode, state.queue.slice(), state.currentSectionName);
+}
+
+function goHome(){
+  state.screen = "home";
+  render();
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+
+function scoreOf(ids, answerBag){
+  let correct = 0;
+  ids.forEach(id => { if(answerBag[id] && answerBag[id].correct) correct++; });
+  return { correct, total: ids.length };
+}
+
+function pctClass(pct){
+  if(pct >= 80) return "great";
+  if(pct >= 50) return "ok";
+  return "low";
+}
+
+function letterFor(i){ return ["A","B","C","D"][i]; }
+
+// ---------------- Renderers ----------------
+function render(){
+  const app = document.getElementById("app");
+  if(state.screen === "home") app.innerHTML = renderHome();
+  else if(state.screen === "quiz") app.innerHTML = renderQuiz();
+  else if(state.screen === "sectionResult") app.innerHTML = renderSectionResult();
+  else if(state.screen === "finalResult") app.innerHTML = renderFinalResult();
+  else if(state.screen === "glossary") app.innerHTML = renderGlossary();
+  attachHandlers();
+}
+
+function overallStats(){
+  const answeredIds = Object.keys(state.allAnswers);
+  const total = QUESTIONS.length;
+  const done = answeredIds.length;
+  const correct = answeredIds.filter(id => state.allAnswers[id].correct).length;
+  return {done, total, correct};
+}
+
+function renderHome(){
+  const stats = overallStats();
+  const hasProgress = stats.done > 0;
+
+  const cards = SECTION_ORDER.map(sec => {
+    const meta = SECTION_META[sec] || {uz: "", icon:"•"};
+    const qs = BY_SECTION[sec];
+    const ids = qs.map(q=>q.id);
+    const answeredIds = ids.filter(id => state.allAnswers[id]);
+    const {correct} = scoreOf(ids, state.allAnswers);
+    const attempted = answeredIds.length;
+    let pillHtml = "";
+    if(attempted > 0){
+      const pct = Math.round((correct/attempted)*100);
+      pillHtml = '<span class="score-pill ' + pctClass(pct) + '">' + correct + '/' + attempted + '</span>';
+    }
+    const vocabCls = sec === "Vocabulary Challenge" ? " is-vocab" : "";
+    return '<button class="section-card' + vocabCls + '" data-action="start-section" data-section="' + encodeURIComponent(sec) + '">' +
+      '<span class="section-tag">' + unitRangeLabel(sec) + '</span>' +
+      '<span class="section-card-body">' +
+        '<p class="section-card-title">' + meta.uz + '</p>' +
+        '<p class="section-card-sub">' + sec + '</p>' +
+        '<span class="section-card-meta">' + qs.length + ' ta savol ' + pillHtml + '</span>' +
+      '</span>' +
+    '</button>';
+  }).join("");
+
+  const reviewCount = Object.keys(state.allAnswers).filter(id => !state.allAnswers[id].correct).length;
+
+  return '' +
+  '<div class="masthead">' +
+    '<div class="masthead-brand"><span class="mark">E</span> Raymond Murphy — 5th Edition asosida</div>' +
+    (hasProgress ? '<div class="masthead-score">Umumiy natija<br><b>' + stats.correct + '/' + stats.done + '</b> · ' + stats.done + '/' + stats.total + ' ishlangan</div>' : '') +
+  '</div>' +
+
+  '<div class="hero">' +
+    '<div class="hero-eyebrow">To\'liq grammatika &amp; lug\'at testi</div>' +
+    '<h1>145 unit, bitta test.</h1>' +
+    '<p>Kitobning barcha 145 ta unitiga asoslangan savollar, shu jumladan qo\'shimcha lug\'at (prepositions, phrasal verbs) mashqlari. Har bir javobdan so\'ng izoh va tegishli unit raqami ko\'rsatiladi — xato qilsangiz, kitobning aynan qaysi sahifasini qayta o\'qish kerakligini bilib olasiz.</p>' +
+    '<div class="hero-stats">' +
+      '<div class="hero-stat"><b>' + QUESTIONS.length + '</b><span>Jami savollar</span></div>' +
+      '<div class="hero-stat"><b>145</b><span>Grammatika uniti</span></div>' +
+      '<div class="hero-stat"><b>' + SECTION_ORDER.length + '</b><span>Bo\'lim</span></div>' +
+    '</div>' +
+    '<div class="btn-row">' +
+      '<button class="btn btn-primary" data-action="start-full">' + (hasProgress ? "Testni davom ettirish" : "To'liq testni boshlash") + ' →</button>' +
+      '<button class="btn btn-ghost" data-action="open-glossary">📖 Lug\'at (' + QUESTIONS.length + ')</button>' +
+      (reviewCount > 0 ? '<button class="btn btn-ghost" data-action="review-mistakes">Xatolarni qayta ishlash (' + reviewCount + ')</button>' : '') +
+    '</div>' +
+  '</div>' +
+
+  '<div class="section-list-label">Bo\'lim bo\'yicha mashq qilish</div>' +
+  '<div class="card-grid">' + cards + '</div>' +
+
+  '<footer class="note">Test "English Grammar in Use" (5th Edition, R. Murphy) kitobining tuzilishi asosida tayyorlandi.<br>Har bir savol kitobdagi tegishli Unit raqamiga bog\'langan.</footer>';
+}
+
+function renderQuiz(){
+  const q = state.queue[state.qIndex];
+  const totalInQueue = state.queue.length;
+  const posInQueue = state.qIndex + 1;
+  const pct = Math.round((posInQueue-1) / totalInQueue * 100);
+  const meta = SECTION_META[q.section] || {uz:""};
+
+  const optsHtml = q.options.map((opt, i) => {
+    let cls = "option";
+    let mark = "";
+    if(state.answered){
+      if(i === q.correct){ cls += " correct"; mark = "✓"; }
+      else if(i === state.selected){ cls += " wrong"; mark = "✕"; }
+      else { cls += " dim"; }
+      cls += " locked";
+    }
+    return '<button class="' + cls + '" data-action="select" data-idx="' + i + '" ' + (state.answered ? "disabled" : "") + '>' +
+      '<span class="letter">' + letterFor(i) + '</span>' +
+      '<span>' + opt + '</span>' +
+      (mark ? '<span class="mark">' + mark + '</span>' : '') +
+    '</button>';
+  }).join("");
+
+  const modeLabel = state.mode === "full" ? "To'liq test" : state.mode === "review" ? "Xatolarni qaytarish" : meta.uz;
+
+  return '' +
+  '<div class="quiz-topbar">' +
+    '<button class="back-btn" data-action="home">← Chiqish</button>' +
+    '<div class="progress-track"><div class="progress-fill" style="width:' + pct + '%"></div></div>' +
+    '<div class="progress-count">' + posInQueue + ' / ' + totalInQueue + '</div>' +
+  '</div>' +
+
+  '<div class="q-card">' +
+    '<div class="q-unit-row">' +
+      '<span class="q-unit-badge">Unit ' + q.unit + '</span>' +
+      '<span class="q-unit-title">' + q.unitTitle + '<br><span style="color:var(--ink-faint)">' + modeLabel + '</span></span>' +
+    '</div>' +
+    '<p class="q-prompt">' + q.prompt.replace(/___/g, '<span class="blank">___</span>') + '</p>' +
+    '<div class="options">' + optsHtml + '</div>' +
+    (state.answered ? '<div class="explain"><div class="explain-term"><span class="pin">📌</span> ' + q.term + ' <span class="tr">— ' + q.termUz + '</span></div><b>' + (state.selected === q.correct ? "To'g'ri! " : "Izoh: ") + '</b>' + q.explanation + '</div>' : '') +
+    '<div class="q-footer">' +
+      (state.answered ? '<button class="btn btn-primary" data-action="next">' + (state.qIndex === state.queue.length - 1 ? "Yakunlash" : "Keyingi savol") + ' →</button>' : '') +
+    '</div>' +
+  '</div>';
+}
+
+function renderSectionResult(){
+  const sectionName = state.currentSectionName;
+  const sectionQs = state.mode === "full" ? BY_SECTION[sectionName] : state.queue;
+  const ids = sectionQs.map(q=>q.id);
+  const {correct, total} = scoreOf(ids, state.runAnswers);
+  const pct = total ? Math.round((correct/total)*100) : 0;
+  const missed = sectionQs.filter(q => state.runAnswers[q.id] && !state.runAnswers[q.id].correct);
+
+  const missedHtml = missed.length ? (
+    '<div class="review-list"><h3>Qayta ko\'rish tavsiya etiladi</h3>' +
+    missed.map(q => '<span class="review-chip"><span class="num">' + q.unit + '</span>' + q.unitTitle + '</span>').join("") +
+    '</div>'
+  ) : '<p style="color:var(--green-deep);font-weight:600;margin-top:18px;">Ushbu bo\'limda barcha savollarga to\'g\'ri javob berdingiz! 🎉</p>';
+
+  let heading, sub;
+  if(state.mode === "review"){
+    heading = "Xatolarni qaytarish";
+    sub = "Oldin xato qilingan " + total + " ta savol bo'yicha natija";
+  } else {
+    const meta = SECTION_META[sectionName] || {uz:""};
+    heading = meta.uz;
+    sub = sectionName + " bo'limi bo'yicha natijangiz";
+  }
+
+  let primaryLabel, primaryAction;
+  if(state.mode === "full" && state._pendingNextSection){
+    primaryLabel = "Keyingi bo'lim →"; primaryAction = "continue-after-section";
+  } else if(state.mode === "full"){
+    primaryLabel = "Yakuniy natijani ko'rish →"; primaryAction = "continue-after-section";
+  } else {
+    primaryLabel = "Qayta urinish"; primaryAction = "retry-run";
+  }
+
+  return '' +
+  '<div class="summary-card">' +
+    '<div class="summary-ring" style="--pct:' + pct + '"><b>' + pct + '%</b><span>' + correct + '/' + total + '</span></div>' +
+    '<h2>' + heading + '</h2>' +
+    '<p class="lead">' + sub + '</p>' +
+    missedHtml +
+    '<div class="btn-row" style="justify-content:center;margin-top:22px;">' +
+      '<button class="btn btn-primary" data-action="' + primaryAction + '">' + primaryLabel + '</button>' +
+      '<button class="btn btn-secondary" data-action="home">Bosh sahifa</button>' +
+    '</div>' +
+  '</div>';
+}
+
+function renderFinalResult(){
+  const stats = overallStats();
+  const pct = stats.done ? Math.round((stats.correct/stats.done)*100) : 0;
+
+  let msg;
+  if(pct >= 90) msg = "Ajoyib! Kitobni chuqur o'zlashtirgansiz.";
+  else if(pct >= 70) msg = "Yaxshi natija! Bir nechta unitni qayta ko'rib chiqsangiz, mukammal bo'ladi.";
+  else if(pct >= 50) msg = "Yomon emas — lekin quyidagi unitlarni qayta o'qib chiqishni tavsiya qilamiz.";
+  else msg = "Bu unitlarni kitobdan qayta o'qib, testni yana ishlab ko'ring.";
+
+  const barsHtml = SECTION_ORDER.map(sec => {
+    const qs = BY_SECTION[sec];
+    const ids = qs.map(q=>q.id);
+    const answeredIds = ids.filter(id => state.allAnswers[id]);
+    if(answeredIds.length === 0) return "";
+    const {correct} = scoreOf(ids, state.allAnswers);
+    const pctSec = Math.round((correct/answeredIds.length)*100);
+    const meta = SECTION_META[sec] || {uz:sec};
+    return '<div class="mini-bar-row">' +
+      '<span class="mini-bar-label"><b>' + meta.uz + '</b></span>' +
+      '<span class="mini-bar-pct">' + correct + '/' + answeredIds.length + '</span>' +
+      '<div class="mini-bar-track"><div class="mini-bar-fill" style="width:' + pctSec + '%; background:' + (pctSec>=80?'var(--green)':pctSec>=50?'var(--gold)':'var(--coral)') + '"></div></div>' +
+    '</div>';
+  }).join("");
+
+  const missedIds = Object.keys(state.allAnswers).filter(id => !state.allAnswers[id].correct);
+  const missedQs = QUESTIONS.filter(q => missedIds.includes(q.id)).sort((a,b)=>a.unit-b.unit);
+
+  const missedDetailHtml = missedQs.length ? (
+    '<div class="review-list" style="margin-top:26px;"><h3>Kitobda qayta o\'qish uchun unitlar (' + missedQs.length + ')</h3>' +
+    missedQs.map(q => '<span class="review-chip"><span class="num">' + q.unit + '</span>' + q.unitTitle + '</span>').join("") +
+    '</div>'
+  ) : '';
+
+  return '' +
+  '<div class="summary-card">' +
+    '<div class="summary-ring" style="--pct:' + pct + '"><b>' + pct + '%</b><span>' + stats.correct + '/' + stats.done + '</span></div>' +
+    '<h2>Yakuniy natija</h2>' +
+    '<p class="lead">' + msg + '</p>' +
+    '<div class="mini-bars">' + barsHtml + '</div>' +
+    missedDetailHtml +
+    '<div class="btn-row" style="justify-content:center;margin-top:22px;">' +
+      (missedQs.length ? '<button class="btn btn-primary" data-action="review-mistakes">Xato javoblarni qayta ishlash</button>' : '') +
+      '<button class="btn btn-secondary" data-action="home">Bosh sahifa</button>' +
+    '</div>' +
+  '</div>';
+}
+
+function renderGlossary(){
+  const filter = state.glossaryFilter;
+  const sectionsToShow = filter === "all" ? SECTION_ORDER : [filter];
+  const filterOptions = '<option value="all">Barcha bo\'limlar</option>' +
+    SECTION_ORDER.map(sec => '<option value="' + encodeURIComponent(sec) + '" ' + (filter === sec ? "selected" : "") + '>' + (SECTION_META[sec] ? SECTION_META[sec].uz : sec) + '</option>').join("");
+
+  const bodyHtml = sectionsToShow.map(sec => {
+    const qs = BY_SECTION[sec];
+    const meta = SECTION_META[sec] || {uz: sec};
+    const cardsHtml = qs.map(q => {
+      return '<div class="flash-card"><div class="flash-inner">' +
+        '<div class="flash-front"><span class="flash-unit">Unit ' + q.unit + '</span><p class="flash-term">' + q.term + '</p><span class="flash-tap">Tarjima uchun bosing ↻</span></div>' +
+        '<div class="flash-back"><span class="flash-unit">' + q.term + '</span><p class="flash-translation">' + q.termUz + '</p></div>' +
+      '</div></div>';
+    }).join("");
+    return '<div class="glossary-section-heading"><span class="tag">' + unitRangeLabel(sec) + '</span>' + meta.uz + '</div>' +
+      '<div class="flash-grid">' + cardsHtml + '</div>';
+  }).join("");
+
+  const totalShown = sectionsToShow.reduce((sum, sec) => sum + BY_SECTION[sec].length, 0);
+
+  return '' +
+  '<div class="quiz-topbar">' +
+    '<button class="back-btn" data-action="home">← Bosh sahifa</button>' +
+  '</div>' +
+  '<div class="section-list-label" style="margin-top:0;">📖 Lug\'at — so\'z va iboralarni yodlash</div>' +
+  '<div class="glossary-toolbar">' +
+    '<select class="glossary-select" onchange="setGlossaryFilter(decodeURIComponent(this.value))">' + filterOptions + '</select>' +
+    '<span class="glossary-count">' + totalShown + ' ta karta</span>' +
+  '</div>' +
+  bodyHtml +
+  '<footer class="note">Kartani bosib, tarjimasini ko\'ring. Har bir so\'z kitobdagi tegishli Unitga bog\'langan.</footer>';
+}
+
+
+function attachHandlers(){
+  document.querySelectorAll("[data-action]").forEach(el => {
+    el.onclick = (e) => {
+      const action = el.getAttribute("data-action");
+      if(action === "start-full") startFullTest();
+      else if(action === "start-section") startSection(decodeURIComponent(el.getAttribute("data-section")));
+      else if(action === "select") selectOption(parseInt(el.getAttribute("data-idx"),10));
+      else if(action === "next") nextQuestion();
+      else if(action === "continue-after-section") continueAfterSectionResult();
+      else if(action === "retry-run") retryRun();
+      else if(action === "home") goHome();
+      else if(action === "review-mistakes") startReviewMistakes();
+      else if(action === "open-glossary") openGlossary();
+    };
+  });
+}
+
+// Flashcard flip - delegated once on the app container so it survives re-renders
+document.getElementById("app").addEventListener("click", function(e){
+  const card = e.target.closest(".flash-card");
+  if(card) card.classList.toggle("flipped");
+});
+
+render();
+</script>
+</body>
+</html>
